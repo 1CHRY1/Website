@@ -1,0 +1,396 @@
+<html>
+<head>
+<title>IWOGMS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="ref/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="ref/animate.min.css">
+<link rel="stylesheet" href="css/universal.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class='container-fluid text-center'>
+  <div class="row title-container green-bg">
+    <div class="col-xs-12 logo top"> <img class="flower" src="img/logo/flower.svg"> <img class="olive" src="img/logo/olive.svg"> </div>
+    <div class="col-xs-12 logo bottom"> <img class="left-house" src="img/logo/left-house.svg"> <img class="main-house" src="img/logo/main-house.svg"> <img class="right-house" src="img/logo/right-house.svg"> </div>
+    <img class="title" src="img/title.png">
+    <div class="col-xs-12">
+      <p style="font-size:26px">International Workshop on<br>
+        Open Geographical Modeling and Simulation</p>
+      <p style="font-size:22px">17-18 AUG, 2017 , NanJing</p>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default" id="headnav"> 
+  <!--创建一个bootstrap全屏布局-->
+  <div class="container-fluid"> 
+    <!--创建一个bootstrapLOGO布局-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationBar " aria-expanded="false">
+       	<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <!--创建导航条元素布局-->
+    <div class="row">
+    	<div class="collapse navbar-collapse col-xs-8 col-xs-offset-2" id="navigationBar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item active"> <a class="nav-link" data-href="#Introduction">Introduction</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Organizers">Organizers</a> </li>
+            <!--<li class="nav-item">
+                            <a class="nav-link" data-href="#Co-organizers">Co-organizers</a>
+                        </li>-->
+            <li class="nav-item"> <a class="nav-link" data-href="#Main-Topics">Main Topics</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Committees">Committees</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Keynote-Speakers">Keynote Speakers</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Session">Sessions/a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Programme">Programme</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Registration">Registration</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Accommodation">Award</a> </li>
+            <li class="nav-item"> <a class="nav-link" data-href="#Contact-information">Contact Us</a> </li>
+          </ul>
+        </div>
+    </div>
+    
+  </div>
+</nav>
+
+<!--<div class="row" style="background-color:#f0f0f0">
+		<nav class="navbar navbar-light nav-container col-xs-8 col-xs-offset-2">
+			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+				Memu &#9776;
+			</button>
+
+			<div class="collapse navbar-toggleable-xs " id="exCollapsingNavbar">
+				<ul class="nav navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" data-href="#Introduction">Introduction</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Organizers">Organizers</a>
+					</li>
+					<!--<li class="nav-item">
+						<a class="nav-link" data-href="#Co-organizers">Co-organizers</a>
+					</li>--> 
+<!--<li class="nav-item">
+						<a class="nav-link" data-href="#Main-Topics">Main Topics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Committees">Committees</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Keynote-Speakers">Keynote Speakers</a>
+					</li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-href="#Session">Sessions</a>
+                    </li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Programme">Programme</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Registration">Registration</a>
+					</li>
+                    <li class="nav-item">
+                    	<a class="nav-link" data-href="#Accommodation">Award</a>
+                    </li>
+					<li class="nav-item">
+						<a class="nav-link" data-href="#Contact-information">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>-->
+
+<div class='container-fluid content-container'>
+  <div class="row" id="Introduction">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Introduction</h4>
+      <hr>
+      <div class="cos-modal"> Geography involves a comprehensive understanding of both natural and human factors and their interactions. Related research topics can be generated from various disciplines (e.g., geomorphology, hydrology, soil science, biology, climate science, and social science), and the focus is on exploring the interactive mechanisms of surface processes. During the research of modern geography, increasing challenges emerge along the complexity, synthesis, quantification and multi-scale of geography. Accordingly, this trend has caused a great deal of challenges on current comprehensive geographical modeling and simulation. Obviously, a single model alone has very limited capacity of simulating complex geographical phenomena, and it can be difficult for a single research group with specific domain knowledge to address comprehensive geographic problems. A reasonable solution for scientific research on complex problems is to engage dispersed multi-disciplinary experts to discuss problems, perform experiments, and find optimal answers through collaborative research. As well, this is feasible and appropriate for geographic research. Nowadays, collaborative geographic modeling and simulation is becoming increasingly popular, involves a number of key issues, i.e., standardization for heterogeneous model, model building in visualized methods, model sharing and reuse on the web, and model integration and simulation. To facilitate collaborative study, an open geographical modeling and simulation architecture is highly desired, which will involve more scholars and their contributions on geographic problem solving. This workshop aims at exploring related theories, methods, and potential applications, facilitating communication between experts from multidisciplinary domains, encouraging extensive discussion regarding the potential directions of the field, and promoting further research for a bright future. </div>
+    </div>
+  </div>
+  <div class="row" id="Organizers">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Organizers</h4>
+      <hr>
+      <div class="cos-modal"> School of Geography Science, Nanjing Normal University, China </div>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2" style="margin-top:1%">
+      <h4 class="cos-strong">Co-organizers</h4>
+      <hr>
+      <div class="cos-modal">
+        <ul>
+          <li>Department of Civil Engineering, Ryerson University, Canada</li>
+          <li>School of Geodesy and Geomatics, Beijing University of Civil Engineering and Architecture, China</li>
+          <li>Key Laboratory of Virtual Geographic Environment(Ministry of Education of PRC), Nanjing Normal University, China</li>
+          <li>Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application, China</li>
+          <li>State Key Laboratory Cultivation Base of Geographical Environment Evolution (Jiangsu Province), China</li>
+          <li>Chinese Academy of Surveying & Mapping, China</li>
+          <li>Jiangsu Association for surveying, mapping and geoinformation, China</li>
+          <li>Jiangsu Association for the sciences of remote sensing and geographic information system, China</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!--<div class="row" id="Co-organizers">
+			
+		</div>-->
+  
+  <div class="row" id="Main-Topics">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Main Topics</h4>
+      <hr>
+      <div class="cos-modal">
+        <div class="cos-strong2">The main conference topics will include but are not limited to:</div>
+        <ul>
+          <li>Modeling of Geographic World in Open Web Environment</li>
+          <li>Cooperation in Intergrating of Geo-analysis Models</li>
+          <li>Spatio-Temporal Modelling and Integration</li>
+          <li>Interoperability, Reusability, and Integrated Systems</li>
+          <li>Information Technology for Sharing and Integrating Geo-analysis Models</li>
+          <li>Visualization of Geographical Data and Interaction of Geo-analysis Models</li>
+          <li>Tools and Methods of Participatory Modelling</li>
+          <li>Geographic Modeling as a Key Component in VGE</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Committees">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Committees</h4>
+      <hr>
+      <div class="cos-modal">
+        <p class="cos-strong">International Scientific Committee</p>
+        <ul>
+          <li>
+            <div class="cos-strong2">Chairmen:</div>
+          </li>
+          <li>
+            <div class="cos-strong2">Co-chairmen:</div>
+          </li>
+          <li>
+            <div class="cos-strong2">Members:</div>
+          </li>
+        </ul>
+        <p class="cos-strong">Local Organizing Committee</p>
+        <ul>
+          <li>
+            <div class="cos-strong2">Chairmen:</div>
+            Guonian Lu, Nanjing Normal University, China </li>
+          <li>
+            <div class="cos-strong2">Co-chairmen:</div>
+            Songnian Li, Ryerson University, Canada <br>
+            Min Chen, Nanjing Normal University </li>
+          <li>
+            <div class="cos-strong2">Members:</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Keynote-Speakers">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Keynote Speakers</h4>
+      <hr>
+      <div class="cos-modal">
+          <img src="img/keynote/Ames.jpg" height="200px" width="160px" />
+          <p>
+              <strong>Prof. Daniel P. Ames &nbsp;&nbsp;&nbsp; (to be finally confirmed)</strong>
+              <br/>
+              Brigham Young University<br/>
+              Editor-in-Chief, Environmental Modelling & Software<br/>
+          </p>
+          <br/>
+		<img src="img/keynote/Harpham.jpg" height="200px" width="160px" />
+        <p>
+			<strong>Dr.&nbsp;Quillon Harpham</strong>
+			<br/>
+			Principal scientist specialising in hydroinformatics, U. K. HR Wallingford.
+			<br/>
+			Chair, Executive Committee of the OpenMI Association<br/>
+			Chair, Technical Committee of the Open Geospatial Consortium<br/>
+			<strong>Topic: Integrated Environmental Modelling – Vision and Building Blocks</strong><br/>
+			<br/>
+			Quillon Harpham is a Principal Scientist in the Hydrodynamics and Metocean Group at HR Wallingford specialising in hydroinformatics. He is a Chartered Scientist and Marine Scientist and directs the SeaZone marine data service. He is the current chair of the OpenMI Association and is also the company's technical representative at the Open Geospatial Consortium. Quillon has an MSc in Numerical Analysis and over 20 years' experience of water information systems and data. He has designed, coded and implemented a number of award winning projects with specialisations including data and information management; model and data integration; workflow; web applications; usability and standardisation. 
+		</p>
+		<br/>
+        <img src="img/keynote/Voinov.jpg" height="200px" width="160px" />
+        <p>
+			<strong>Prof.&nbsp;Alexey Voinov</strong>
+			<br/>
+			University of Twente<br/>
+			Former President, the International Environmental Modelling & Software Society 
+		</p>
+		<br/>
+        <img src="img/keynote/Kettner.jpg" height="200px" width="160px" />
+        <p>
+			<strong>Dr.&nbsp;Albert Kettner</strong><br/>
+			Research Scientist, Community Surface Dynamics Modeling System(CSDMS)<br/>
+            Co-Director Chair, Dartmouth Flood Observatory (DFO)<br />
+			<strong>Topic: Towards A Modeling Framework for Simulating Earth Surface Processes</strong> <br/>
+			<br/>
+			Dr. Kettner received a Ph.D. in Civil Engineering & Geosciences (2007) at Delft University of Technology, the Netherlands where he studied local and global fluvial supply dynamics to the coastal zone. With numerical models he investigates the impact of long-term climate and sea-level controls on riverine water and sediment fluxes and how these fluxes change over time. On shorter timescales, Kettner focuses on anthropogenic changes (e.g. altering of land use and placement of reservoirs) and how these impact water discharge and sediment flux.<br/>
+			Dr. Kettner has been from the beginning (2006) intimitly involved in the Community Surface Dynamics Modeling System (CSDMS) at INSTAAR, the University of Colorado, USA. He is an active advocate of free available, open source code of numerical models and as such responsible for the CSDMS repositories.<br/>
+			He became Co-Director (2011) of the Dartmouth Flood Observatory (DFO), currently housed at INSTAAR. For DFO he designs and implements GIS frameworks to automate free available DFO product distribution for e.g. global flood inundation maps & the status of remotely sensed gauging stations. 
+		</p>
+		<br />
+        <img src="img/keynote/goodall.jpg" height="200px" width="160px" />
+        <p>
+          <strong>Dr.&nbsp;Jonathan L. Goodall</strong><br/>
+            University of Virginia<br />
+            Assistant Director, Link Lab<br />
+            Group Leader, Hydroinformatics Research Group<br />
+            Affiliate Faculty, Center for Transportation Studies<br />
+          <br/>
+            Jonathan Goodall is an Associate Professor in the Department of Civil and Environmental Engineering at the University of Virginia. His teaching and research interests are in environmental and water resources engineering focusing in particular on modeling and managing water infrastructure as a cyber physical system. Professor Goodall is the recipient of an National Science Foundation (NSF) CAREER award and an International Society for Environmental Modelling & Software (iEMSs) Early Career Research Excellence award. He currently serves as an Associate Editor for the ASCE Journal of Computing in Civil Engineering and on the Editorial Board for Environmental Modelling & Software. He leads the Hydroinformatics Research Group, is Assistant Director of the interdisciplinary Link Lab, and is an affiliated faculty member of the Center for Transportation Studies. Prior to joining UVA in the fall of 2013, he held a faculty positions at the University of South Carolina-Columbia and Duke University.
+        </p>
+        <br />
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Programme">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Programme</h4>
+      <hr>
+      <div class="cos-modal">
+        <ul>
+          <li>
+            <div class="cos-strong2">Registration</div>
+            16 AUG., 2017 </li>
+          <li>
+            <div class="cos-strong2">Conference</div>
+            17-18 AUG., 2017 </li>
+          <li>
+            <div class="cos-strong2">Field trip</div>
+            19 AUG., 2017<br>
+            The field-trip will be hold. Details will be show in accommodation. Welcome your participation! </li>
+          <li>
+            <div class="cos-strong2">Details</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Registration">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Registration</h4>
+      <hr>
+      <div class="cos-modal">
+        <p class="cos-strong2">Conference on 17-18 AUG 2017*</p>
+        <table class="table">
+          <thead class="green-bg" style="color:#fff;">
+            <tr>
+              <th>Type</th>
+              <th>RMB</th>
+              <th>Dollars</th>
+              <th>Euro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Regular</th>
+              <td>&yen;1400</td>
+              <td>$200</td>
+              <td>&euro;200</td>
+            </tr>
+            <tr>
+              <th scope="row">Student</th>
+              <td>&yen;700</td>
+              <td>$100</td>
+              <td>&euro;100</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>* This do not include field trip</strong> </p>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Accommodation">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Award</h4>
+      <hr>
+      <div class="cos-modal">
+        <p>The following hotels are the designated accommodation for the conference. Due to limited rooms available in the hotels and hostel, you are strongly advised to make room reservation at your earliest convenience. All the reservations are confirmed by first-come-first-served basis.</p>
+        <p><strong style="color:#e96600">University Guest House</strong><strong style="color:#e73933">(Xianlin Hotel)</strong></p>
+        <img src="img/Accommodation/xianlinhotel.jpg" width="560" height="372" class="img-responsive">
+        <div style="margin-top:1%"> <strong style="color:#e96600;"><span>Address:</span></strong> <br/>
+          <span> Nanjing Normal University, No.1, Wenyuan Road, Xianlin University Town, Qixia District, Nanjing City, Jiangsu Province, China </span><br/>
+          <strong style="color:#e96600"><span>Tel:&nbsp;</span></strong><span>025-85845888</span><br/>
+          <strong style="color:#e96600"><span>Location Map:&nbsp;</span></strong> <br/>
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3379.572491742624!2d118.91025731516514!3d32.10783798117915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b5ec36847dfe9b%3A0x1ab6d189db472bf!2sXianlin+Hotel!5e0!3m2!1sen!2sus!4v1463571096009" width="600" height="450" frameborder="0"> --> 
+          <!-- </iframe> -->
+          
+          <iframe src="map.html" id="myiframe" scrolling="no"  frameborder="0" width="700" height="552"> </iframe>
+          <br/>
+          <strong style="color:#e96600"><span>Suggested transportation to the hotel:&nbsp;</span></strong><br/>
+          <span>-From Lukou Airport: Click <strong><a href="http://api.map.baidu.com/direction?origin=latlng:31.736898,118.883296|name:禄口机场&destination=仙林宾馆&mode=driving&region=南京&output=html" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span><br/>
+          <!-- <span>-From Lukou Airport: Click <strong><a href="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d54089.01526633985!2d118.83053960986902!3d32.08105410536861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x35b58cfa6ac907d7%3A0x49ebdd78f3375966!2sNanjing+Lukou+International+Airport+Limited+Company%2C+221+%E9%BE%99%E8%9F%A0%E4%B8%AD%E8%B7%AF+Bai+Xia+Qu%2C+Nanjing%2C+Jiangsu%2C+China!3m2!1d32.0349272!2d118.80265519999999!4m5!1s0x35b5ec4cd054dd7b%3A0xd8a5811448567c95!2sNanjing+Normal+University+%EF%BC%88Xianlin+Campus%EF%BC%89+Sports+Center%2C+Wenyuan+Road%2C+Qixia%2C+Nanjing%2C+Jiangsu%2C+China!3m2!1d32.09818!2d118.906562!5e0!3m2!1sen!2sjp!4v1462883487332" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span><br/>                         --> 
+          <span>&nbsp;Taxi RMB200</span><br/>
+          <span>-From Nanjing Railway Station: Click <span style="color:#337FE5;"><strong><a href="http://api.map.baidu.com/direction?origin=latlng:32.093297,118.804676|name:南京战&destination=仙林宾馆&mode=driving&region=南京&output=html" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span></span><br/>
+          <!-- <span>-From Nanjing Railway Station: Click <span style="color:#337FE5;"><strong><a href="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d108175.43438521965!2d118.80463342704151!3d32.08324763877655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x35b5f33bee3db6fb%3A0xd634c351adfda352!2sNan+Jing+Zhan%2C+Xuanwu+Qu%2C+Nanjing+Shi%2C+Jiangsu+Sheng%2C+China!3m2!1d32.0862143!2d118.7964947!4m5!1s0x35b5ec499a91983d%3A0xb2fbc001d2234003!2sNanjing+Normal+University+Xianlin+Campus%2C+3rd+Rd%2C+Qixia+Qu%2C+Nanjing+Shi%2C+Jiangsu+Sheng%2C+China%2C+210046!3m2!1d32.102471!2d118.91269299999999!5e0!3m2!1sen!2sjp!4v1462891718241" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span></span><br/> --> 
+          <span>&nbsp;Taxi RMB25</span><br/>
+          <span>-From Nanjing South Railway Station: Click <span style="color:#337FE5;"><strong><a href="http://api.map.baidu.com/direction?origin=latlng:31.977513,118.803661|name:南京南站&destination=仙林宾馆&mode=driving&region=南京&output=html" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span></span><br/>
+          <!-- <span>-From Nanjing South Railway Station: Click <span style="color:#337FE5;"><strong><a href="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d108231.99812313978!2d118.78437682020031!3d32.03542549986548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x35b58e92496cd043%3A0x4c010a3876aa6d95!2sNanjing+South+Railway+Station%2C+China!3m2!1d31.968887!2d118.798048!4m5!1s0x35b5ec499a91983d%3A0xb2fbc001d2234003!2sNanjing+Normal+University+Xianlin+Campus%2C+3rd+Rd%2C+Qixia+Qu%2C+Nanjing+Shi%2C+Jiangsu+Sheng%2C+China%2C+210046!3m2!1d32.102471!2d118.91269299999999!5e0!3m2!1sen!2sjp!4v1462892372560" target="_blank"><span style="color:#337FE5;">here</span></a></strong></span></span><br/> --> 
+          <span>&nbsp;Taxi RMB75</span><br/>
+          <strong style="color:#e96600"><span>Discounted Room Rate:&nbsp;</span></strong><br/>
+          <ul>
+            <li>Superior room (1 double bed) with ONE breakfast: RMB240 per night</li>
+            <li>Twin room (two single beds) with TWO breakfasts: RMB260 per night</li>
+            <li>Landscape room (two single beds) with TWO breakfasts: RMB240 per night</li>
+          </ul>
+        </div>
+        <div> <strong style="color:#e96600"><span>Field-trip Details:&nbsp;</span></strong><br/>
+          <span><strong>Nanjing</strong>(<a href="http://en.wikipedia.org/wiki/Nanjing" target="_blank">http://en.wikipedia.org/wiki/Nanjing</a>)</span><br/>
+          <span>Introduction:  Nanjing is a city situated in the heartland of the lower Yangtze River region in China, and which has long been a major center of culture, education, research, politics, economy, transport networks and tourism. It is the capital city of Jiangsu province of People's Republic of China and the second largest city in East China, and legally the capital of Republic of China which lost the main land during the civil war. The city has a prominent place in Chinese history and culture, having served as the capitals of various Chinese dynasties, kingdoms and republican governments dating from the 3rd century AD to 1949. Nanjing is one of the most beautiful cities of mainland China with lush green parks, natural scenic lakes, small mountains, historical buildings and monuments, relics and much more, which attracts thousands of tourists every year. </span><br/>
+          <div align="center"> <img src="img/Accommodation/nj1.png" width="288px" height="184px" style="margin:3px" class="img-responsive"> <img src="img/Accommodation/nj2.png" width="288px" height="184px" style="margin:3px" class="img-responsive"> </div>
+          <div align="center"> <img src="img/Accommodation/nj3.png" width="288px" height="184px" style="margin:3px" class="img-responsive"> <img src="img/Accommodation/nj4.png" width="288px" height="184px" style="margin:3px" class="img-responsive"> </div>
+          <span>Route:<br/>
+          The mausoleum of Dr. Sun yat-sen<br/>
+          Zhonghua Gate<br/>
+          The Nanjing Massacre Memorial Hall<br/>
+          The Yuejiang Tower<br/>
+          <strong>Details:</strong> <a href="http://www.ew-cm2016.org/doc/南京一日1.1.doc">Click here</a> </span> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="Contact-information">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h4 class="cos-strong">Contact Us</h4>
+      <hr>
+      <div class="cos-modal">
+        <p class="cos-strong2">Programme Coordinator</p>
+        <ul>
+          <li>
+            <div class="cos-strong2">Prof. Min Chen, Nanjing Normal University</div>
+            Email:<a href="mailto:chenmin0902@njnu.edu.cn">chenmin0902@njnu.edu.cn</a> </li>
+          <li>
+            <div class="cos-strong2">Prof. Li He, Xi’an Jiaotong University, China</div>
+            Email:<a href="mailto:aga-ygwg@xjtu.edu.cn">aga-ygwg@xjtu.edu.cn</a> </li>
+        </ul>
+        <p class="cos-strong2">Conference Secretariat</p>
+        <ul>
+          <li>
+            <div class="cos-strong2">Mr. Fengyuan Zhang, Nanjing Normal University</div>
+            Email:<a href="mailto:franklinzhang@foxmail.com">franklinzhang@foxmail.com</a> </li>
+          <li>
+            <div class="cos-strong2">Mr. Jin Wang, Nanjing Normal University</div>
+            Email:<a href="mailto:giswangjin@gmail.com">giswangjin@gmail.com</a> </li>
+          <li>
+            <div class="cos-strong2">Ms. Yuting Li, Nanjing Normal University</div>
+            Email:<a href="mailto:yutingli321@gmail.com">yutingli321@gmail.com</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='container-fluid footer-container text-center'>
+  <hr>
+  <span style="font-family:arial;">Copyright &copy;2017 NNU</span>
+  <div><a href="http://www.njnu.edu.cn/">http://en.nnu.edu.cn/</a></div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="ref/jquery.min.js"></script>
+<script type="text/javascript" src="ref/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
