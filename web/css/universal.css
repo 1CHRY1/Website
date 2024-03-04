@@ -1,0 +1,46 @@
+@font-face
+{
+	font-family: lato-light;
+	src: url('../font/lato-light.woff');
+}
+
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+
+
+body
+{
+  padding:0px;
+  margin:0px;
+  font-family:lato-light , "Segoe UI", Arial, "Microsoft Yahei", sans-serif;
+}
+
+.green-bg{
+	background-color: #2b669a;
+    /*background-image: url("../img/banner/ISDE_banner1.jpg");*/
+	/* animation:green-bg 5s infinite alternate;
+	-moz-animation:green-bg 5s infinite alternate;
+	-webkit-animation:green-bg 5s infinite alternate;
+	-o-animation:green-bg 5s infinite alternate; */
+}
+/* @keyframes green-bg
+{
+	form{background-color:#117450;}
+	to{background-color:#1c7065;}
+}
+@-moz-keyframes green-bg
+{
+	form{background-color:#117450;}
+	to{background-color:#1c7065;}
+}
+@-webkit-keyframes green-bg
+{
+	form{background-color:#117450;}
+	to{background-color:#1c7065;}
+}
+@-o-keyframes green-bg
+{
+	form{background-color:#117450;}
+	to{background-color:#1c7065;} 
+}*/

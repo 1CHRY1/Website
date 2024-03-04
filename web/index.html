@@ -1,0 +1,1608 @@
+<html>
+
+<head>
+  <title>IWGMS2024</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="ref/bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="ref/animate.min.css">
+  <link rel="stylesheet" href="css/universal.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    .nnu{
+      position: absolute;right:0%;bottom: 0%;
+    }
+    .submit{
+      position:absolute;right:15px;
+    }
+    @media screen and (max-width: 450px) {
+      .submit{
+        position: absolute;
+        /* right: 15px; */
+        margin-top: 30px;
+        left: 15px
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .nnu{
+        position: relative;right:0%;bottom: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!--  <div class='container-fluid text-center'>-->
+<!--    <div class="row title-container col-xs-10 col-xs-offset-1" style="background-image: url(img/logo/GSC.jpg);background-position: center center; background-repeat:no-repeat; background-size: 100%">-->
+
+<!--&lt;!&ndash;      <img src="img/logo/ISDE.png" width="80" height="84"><img src="img/logo/CBAS.png" width="80" height="84"><img src="img/logo/AIRICAS.jpg" width="80" height="84"><img src="img/logo/nnulogo.jpg" width="80" height="84">&ndash;&gt;-->
+
+<!--      &lt;!&ndash; <div class="col-xs-12 logo top">-->
+<!--        <img class="flower" src="img/logo/flower.svg">-->
+<!--        <img class="olive" src="img/logo/olive.svg">-->
+<!--      </div>-->
+<!--      <div class="col-xs-12 logo bottom">-->
+<!--        <img class="left-house" src="img/logo/left-house.svg">-->
+<!--        <img class="main-house" src="img/logo/main-house.svg">-->
+<!--        <img class="right-house" src="img/logo/right-house.svg">-->
+<!--      </div> &ndash;&gt;-->
+<!--      &lt;!&ndash; <img class="title" src="img/title.png"> &ndash;&gt;-->
+<!--      <br>-->
+<!--      <div class="col-xs-12 logotitle">-->
+<!--        <br><br><br><br><br><br><br><br><br><br>-->
+<!--&lt;!&ndash;        <p style="font-size:40px;font-family: 'Times New Roman'">The 1st Youth Innovation Forum on Digital Earth</p>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <br>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;          <p style="font-size:22px">"Modelling for Environmental Sustainability: Asia’s Next Great Challenge"</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          <p style="font-size:30px;font-family: 'Times New Roman'">August 21-23, 2023</p>&ndash;&gt;-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<div class='container-fluid text-center'>
+  <div class="row title-container green-bg col-xs-10 col-xs-offset-1" style="background-color:#1e7051">
+    <!-- <div class="col-xs-12 logo top">
+      <img class="flower" src="img/logo/flower.svg">
+      <img class="olive" src="img/logo/olive.svg">
+    </div>
+    <div class="col-xs-12 logo bottom">
+      <img class="left-house" src="img/logo/left-house.svg">
+      <img class="main-house" src="img/logo/main-house.svg">
+      <img class="right-house" src="img/logo/right-house.svg">
+    </div> -->
+    <!-- <img class="title" src="img/title.png"> -->
+    <div class="col-xs-12 logotitle">
+      <p style="font-size:26px">3rd International Workshop on Geographic Modeling and Simulation: Modeling and Simulation for A Sustainable World</p>
+      <!--          <br>-->
+      <!--          <p style="font-size:22px">"Modelling for Environmental Sustainability: Asia’s Next Great Challenge"</p>-->
+      <p style="font-size:22px">Oct 25 – 28, 2024</p>
+      <p style="font-size:22px">Nanjing, China</p>
+    </div>
+    <div class="nnu">
+      <img class="left-house" height="80" width="120" src="img/logo/nnu.jpg">
+    </div>
+  </div>
+</div>
+<div style="padding-left:15px;padding-right: 15px">
+  <nav class="navbar navbar-default col-xs-10 col-xs-offset-1" id="headnav" style="padding-left:0px;margin-bottom: 0px;font-family: 'Times New Roman'">
+    <!--创建一个bootstrap全屏布局-->
+    <div class="container-fluid" style="padding-left:0px">
+      <!--创建一个bootstrapLOGO布局-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationBar " aria-expanded="false">
+          <span class="sr-only">switch</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!--创建导航条元素布局-->
+      <div class="row">
+        <div class="collapse navbar-collapse " id="navigationBar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Introduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Organizers">Organizers</a>
+            </li>
+            <!--<li class="nav-item">
+                          <a class="nav-link" data-href="#Co-organizers">Co-organizers</a>
+                      </li>-->
+            <!-- <li class="nav-item"> <a class="nav-link" data-href="#Main-Topics">Main Topics</a> </li> -->
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Committees">Committees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Forum">Keynote Speakers</a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Schedule">Schedule</a>-->
+<!--            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Programme">Programme</a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Registration">Registration</a>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Location">Location</a>-->
+<!--            </li>-->
+            </li>
+            <!--              <li class="nav-item">-->
+            <!--                <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#About">About</a>-->
+            <!--              </li>-->
+            <li class="nav-item">
+              <a class="nav-link" style="font-size:17px;font-weight:bolder" data-href="#Contact-information">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--<div class="row" style="background-color:#f0f0f0">
+      <nav class="navbar navbar-light nav-container col-xs-8 col-xs-offset-2">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+              Memu &#9776;
+          </button>
+
+          <div class="collapse navbar-toggleable-xs " id="exCollapsingNavbar">
+              <ul class="nav navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" data-href="#Introduction">Introduction</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Organizers">Organizers</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Co-organizers">Co-organizers</a>
+                  </li>-->
+<!--<li class="nav-item">
+                      <a class="nav-link" data-href="#Main-Topics">Main Topics</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Committees">Committees</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Keynote-Speakers">Keynote Speakers</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Session">Session</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Programme">Programme</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Registration">Registration</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Accommodation">Award</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-href="#Contact-information">Contact Us</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>-->
+
+<div class='container-fluid content-container' style="font-family: 'Times New Roman'">
+  <div class="row" id="Introduction">
+    <div id="myCarousel" class="carousel slide col-xs-10 col-xs-offset-1" style="padding-left: 12px;padding-right:12px">
+      <!-- 轮播（Carousel）指标 -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- 轮播（Carousel）项目 -->
+      <!--        <div class="carousel-inner">-->
+      <!--          <div class="item active">-->
+      <!--            <img class="title-img" src="./img/Place/P1_1.jpg" alt="First slide">-->
+      <!--          </div>-->
+      <!--          <div class="item">-->
+      <!--            <img class="title-img" src="./img/Place/P2_2.jpg" alt="Second slide">-->
+      <!--          </div>-->
+      <!--          <div class="item">-->
+      <!--            <img class="title-img" src="./img/Place/P3_3.jpg" alt="Second slide">-->
+      <!--          </div>-->
+      <!--          <div class="item">-->
+      <!--            <img class="title-img" src="./img/Place/P4_4.jpg" alt="Second slide">-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="./img/banner/_7.jpg" alt="First slide">
+        </div>
+        <div class="item">
+          <img src="./img/banner/_6.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+          <img src="./img/banner/_9.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+          <img src="./img/banner/_10.jpg" alt="Second slide">
+        </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="left carousel-control" style="margin-left: 12px" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" style="margin-right: 12px" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">
+      <!--        <h3 class="cos-strong">Introduction<a  href="submission.html" target="_blank"><button class="btn btn-danger submit" style="font-size: 18px">Submit Paper, Abstract or Register Now</button></a></h3>-->
+      <h3 class="cos-strong">Introduction<a  href="submission.html" target="_blank"></a></h3>
+
+
+      <hr>
+      <div class="cos-modal">
+        <p>
+          &emsp;&emsp;In a sustainable world, it is imperative to meet people's needs without causing chronic harm to the
+          environment or compromising the ability of future generations. Achieving sustainability requires extensive
+          research encompassing various theories and approaches from diverse domains. This research requires not only
+          real-time observation but also a profound understanding of global evolution, enabling long-term analysis and
+          forecasting. The complexities of understanding and forecasting evolutionary processes necessitate geographic
+          modeling and simulation, which have emerged as potent tools for addressing critical issues such as climate
+          change and sustainable resource use. Research in this field spans disciplines including geomorphology,
+          hydrology, soil science, biology, climate science, and social science, all focused on unraveling the
+          interactive mechanisms of surface processes. Contemporary geographical modeling and simulation encounter
+          significant challenges, including grasping the intricacies of the geographic world, integrating simulations
+          across diverse domains, and fostering participatory modeling with multiple stakeholders. However, existing
+          theories and approaches struggle to adequately address these challenges. In response, a promising solution
+          for tackling complex geographical problems involves engaging dispersed multidisciplinary experts and resources
+          for collaborative problem-solving. This approach facilitates experimentation and the pursuit of optimal
+          solutions through joint research efforts, proving not only feasible but also highly effective in advancing
+          geographic research. To further support this collaborative approach, there is a pressing need for an open
+          geographical modeling and simulation framework. Such a framework would serve as a catalyst, attracting more
+          scholars and encouraging their collective efforts to address geographic challenges.
+          <br>
+          &emsp;&emsp;This workshop is meticulously designed to explore pertinent theories, approaches, and potential
+          applications, while fostering communication among experts from diverse domains. Its primary objectives
+          include stimulating extensive discussions regarding the potential directions of the field and promoting
+          further research, thus paving the way for a promising future in collaborative geographic modeling and
+          simulation.
+        </p>
+      </div>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">
+      <h3 class="cos-strong">Theme</h3>
+      <hr>
+      <div class="cos-modal">
+        <p>
+          Modeling and Simulation for A Sustainable World
+          <!--            <table class="table">-->
+          <!--              <thead class="green-bg" style="color:#fff;">-->
+          <!--                <tr>-->
+          <!--                  <th>Event</th>-->
+          <!--                  <th>Deadline</th>-->
+          <!--                </tr>-->
+          <!--              </thead>-->
+          <!--              <tbody>-->
+          <!--                <tr>-->
+          <!--                  <th scope="row">Deadline for submission of full papers (Optional & only required for applicants of student scholarships and conference travel grants) </th>-->
+          <!--                  <td>5 March 2019 </td>-->
+          <!--                </tr>-->
+          <!--                <tr>-->
+          <!--                  <th scope="row">Notification of acceptance of full papers and results of student scholarships and conference travel grants <br /> First round of notification of acceptance of abstracts</th>-->
+          <!--                  <td>12 March 2019 </td>-->
+          <!--                </tr>-->
+          <!--                <tr>-->
+          <!--                  <th scope="row">Deadline for early registration</th>-->
+          <!--                  <td>15 March 2019 </td>-->
+          <!--                </tr>-->
+          <!--                <tr>-->
+          <!--                  <th scope="row">Deadline for submission of abstracts</th>-->
+          <!--                  <td>8 April 2019 </td>-->
+          <!--                </tr>-->
+          <!--                <tr>-->
+          <!--                  <th scope="row">Final round of notification of acceptance of abstracts</th>-->
+          <!--                  <td>15 April 2019 </td>-->
+          <!--                </tr>-->
+          <!--              </tbody>-->
+          <!--            </table>-->
+        </p>
+      </div>
+    </div>
+    <!-- <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px "> -->
+    <!-- <h3 class="cos-strong">Abstract/Manuscript Submission</h3> -->
+    <!-- <hr> -->
+    <!-- <div class="cos-modal"> -->
+    <!-- <p>Click the button to enter submission system</p><a class="btn btn-warning" href="submission.html" target="_blank">Submission System</a> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">
+      <h3 class="cos-strong">Date & Location</h3>
+      <hr>
+      <div class="cos-modal">
+        <span class="title">Date: </span>Oct 25 – 28, 2024
+        <br/>
+        <span class="title">Location: </span>Nanjing, China
+      </div>
+    </div>
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <hr>-->
+    <!--        <h3 class="cos-strong">Notices</h3>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <li>-->
+    <!--            <a href="doc/YSIN_DocumentNo1_English.jpg" download>Document No.1 of ISDE_YSIN (English)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/YSIN_DocumentNo1_Chinese.jpg" download>Document No.1 of ISDE_YSIN (Chinese)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/YSIN_DocumentNo2_English.jpg" download>Document No.2 of ISDE_YSIN (English)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/YSIN_DocumentNo2_Chinese.jpg" download>Document No.2 of ISDE_YSIN (Chinese)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/Description_of_Reserving_Conference_Rooms_at_the_Friendship_Hotel_English.doc" download>Description_of_Reserving_Conference_Rooms_at_the_Friendship_Hotel (English)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/Description_of_Reserving_Conference_Rooms_at_the_Friendship_Hotel_Chinese.doc" download>Description_of_Reserving_Conference_Rooms_at_the_Friendship_Hotel (Chinese)</a>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <a href="doc/Conference%20Manual.pdf" download>Conference Manual</a>-->
+    <!--          </li>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!-- <div class="col-xs-8 col-xs-offset-2">
+    <br /><br /><br />
+    <h4 class="cos-strong">Main Topics</h4>
+    <hr>
+    <div class="cos-modal">
+      <div class="cos-strong2">The main conference topics will include but are not limited to:</div>
+      <ul>
+        <li>Modeling of Geographic World in Open Web Environment</li>
+        <li>Cooperation in Intergrating of Geo-analysis Models</li>
+        <li>Spatio-Temporal Modelling and Integration</li>
+        <li>Interoperability, Reusability, and Integrated Systems</li>
+        <li>Information Technology for Sharing and Integrating Geo-analysis Models</li>
+        <li>Visualization of Geographical Data and Interaction of Geo-analysis Models</li>
+        <li>Tools and Methods of Participatory Modelling</li>
+        <li>Geographic Modeling as a Key Component in VGE</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-8 col-xs-offset-2" >
+        <br />
+        <br />
+        <br />
+        <h4 class="cos-strong">Call for Abstract</h4>
+        <hr>
+        <div class="cos-modal">
+            <p>
+                You are kindly invited to submit paper abstracts related to the theme on the workshop.
+                Abstracts should be submitted electronically in English and should be less than 300 words.
+                Please submit the abstract with the following details:
+            </p>
+            <p>Abstracts must include:</p>
+            <ul>
+                <li>Title and authors by surname followed by initials and indicate the reporter by underlining their names</li>
+                <li>Author’s contact details (institute/company name, full address, telephone no., fax no. and email)</li>
+                <li>Keywords</li>
+            </ul>
+            <p><strong>IMPORTANT DATES:</strong> </p>
+            <p><strong>January 15, 2019</strong>&nbsp;&nbsp;&nbsp;Abstract and Full Paper Submission Deadline</p>
+            <p><strong>March 20, 2019</strong>&nbsp;&nbsp;&nbsp;Notification of the results of the acception</p>
+            <p></p>
+        </div>
+  </div> -->
+  </div>
+
+  <div class="row" id="Organizers" style="font-family: 'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3 class="cos-strong">Organizers</h3>
+      <hr>
+      <div class="cos-modal">
+        <ul>
+          <li>School of Geography Science, Nanjing Normal University, China</li>
+          <li>Key Laboratory of Virtual Geographic Environment(Ministry of Education of PRC), Nanjing Normal University, China</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-10 col-xs-offset-1" style="margin-top:1%">
+      <h3 class="cos-strong">Co-organizers</h3>
+      <hr>
+      <div class="cos-modal">
+        <ul>
+          <li>The International Association of Chinese Professionals in Geographic Information Sciences</li>
+          <li>International Environmental Modelling and Software Society</li>
+          <li>International Geographical Union - Modeling Geographical Systems Commission</li>
+          <li>International Research Center of Big Data for Sustainable Development Goals</li>
+          <li>Geographic Model and Geographic Information Analysis Commission, The Geographical Society of China</li>
+          <li>Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application, China </li>
+          <li>School of Environment, Nanjing Normal University</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="row" id="Co-organizers">
+
+      </div>-->
+
+  <div class="row" id="Main-Topics" style="font-family: 'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3 class="cos-strong">Main Topics</h3>
+      <hr>
+      <div class="cos-modal">
+        <div class="cos-strong2">The main conference topics will include but are not limited to:</div>
+        <ul>
+          <li>Modeling of Geographic World in Open Web Environment</li>
+          <li>Cooperation in Intergrating of Geo-analysis Models</li>
+          <li>Spatio-Temporal Modelling and Integration</li>
+          <li>Interoperability, Reusability, and Integrated Systems</li>
+          <li>Information Technology for Sharing and Integrating Geo-analysis Models</li>
+          <li>Visualization of Geographical Data and Interaction of Geo-analysis Models</li>
+          <li>Tools and Methods of Participatory Modelling</li>
+          <li>Geographic Modeling as a Key Component in VGE</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="Committees" style="font-family: 'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3 class="cos-strong">Committees</h3>
+      <hr>
+      <div class="cos-modal">
+        <p class="cos-strong">International Scientific Committee</p>
+        <ul>
+          <li>
+            <div class="cos-strong2"><strong>Chairman:</strong></div>
+            <p></p>
+            <strong>Michael Batty</strong>, University College London<br/>
+            <strong>Huadong Guo</strong>, Aerospace Information Research Institute, Chinese Academy of Sciences<br/>
+            <strong>Bojie Fu</strong>, Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences<br/>
+            <p></p>
+          </li>
+          <li>
+            <div class="cos-strong2"><strong>Members:</strong></div>
+            <p></p>
+            <strong>Daniel P. Ames</strong>, Brigham Young University<br/>
+            <strong>Ioannis Athanasiadis</strong>, Wageningen University & Research<br/>
+            <strong>Carlos Granell Canut</strong>, Jaume I University<br/>
+            <strong>Stewart Fotheringham</strong>, Arizona State University<br/>
+            <strong>Juliana Freire</strong>, New York University<br/>
+            <strong>Jonathan Goodall</strong>, University of Virginia<br/>
+<!--            <strong>Carlo Gualtieri</strong>, University of Naples Federico II<br/>-->
+            <strong>Quillon Harpham</strong>, HR Wallingford<br/>
+            <strong>Anthony Jakeman</strong>, Australian National University<br/>
+            <strong>Albert Kettner</strong>, University of Colorado Boulder<br/>
+            <strong>Peter Khaiter</strong>, York University<br/>
+            <strong>Xin Li</strong>, Institute of Tibetan Plateau Research, Chinese Academy of Sciences<br/>
+            <strong>Hui Lin</strong>, Jiangxi Normal University<br/>
+            <strong>John C. Little</strong>, Virginia Polytechnic Institute and State University<br/>
+<!--            <strong>Holger R. Maier</strong>, The University of Adelaide<br/>-->
+            <strong>Michael Meadows</strong>, University of Cape Town<br/>
+<!--            <strong>Nigel William Trevelyan Quinn</strong>, Berkeley National Laboratory<br/>-->
+            <strong>Stefan Reis</strong>, DLR Projektträger<br/>
+<!--            <strong>Amir Sadoddin</strong>, Gorgan University of Agricultural Sci.& Natural Resources<br/>-->
+            <strong>Paul Torrens</strong>, State University of New York<br/>
+            <strong>Gregory E. Tucker</strong>, University of Colorado Boulder<br/>
+            <strong>Alexey Voinov</strong>, University of Twente<br/>
+            <strong>Changlin Wang</strong>, Aerospace Information Research Institute, the Chinese Academy of Sciences<br/>
+            <strong>Jinfeng Wang</strong>, Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences<br/>
+            <p></p>
+          </li>
+        </ul>
+        <hr>
+        <p class="cos-strong">Local Organizing Committee</p>
+        <ul>
+          <li>
+            <div class="cos-strong2"><strong>Chairman:</strong></div>
+            <p></p>
+            <strong>Guonian Lv</strong>, Nanjing Normal University<br/>
+            <strong>Min Chen</strong>, Nanjing Normal University<br/>
+            <p></p>
+          </li>
+          <li>
+            <div class="cos-strong2"><strong>Members:</strong></div>
+            <p></p>
+            <strong>Min Cao</strong>, Nanjing Normal University
+            <br /> <strong>Qiang Dai</strong>, Nanjing Normal University
+            <br /> <strong>Fei Guo</strong>, Nanjing Normal University
+            <br /> <strong>Changchun Huang</strong>, Nanjing Normal University
+            <br /> <strong>Longhui Li</strong>, Nanjing Normal University
+            <br /> <strong>Shuo Li</strong>, Nanjing Normal University
+            <br /> <strong>Jian Lin</strong>, Nanjing Normal University
+            <br /> <strong>Jian Liu</strong>, Nanjing Normal University
+            <br /> <strong>Junzhi Liu</strong>, Lanzhou University
+            <br /> <strong>Mingyue Lu</strong>, Nanjing University of Information Science and Technology
+            <br /> <strong>Qin Ma</strong>, Nanjing Normal University
+            <br /> <strong>Weichao Ma</strong>, Nanjing Normal University
+            <br /> <strong>Zaiyang Ma</strong>, Nanjing Normal University
+            <br /> <strong>Zhuotong Nan</strong>, Nanjing Normal University
+            <br /> <strong>Liang Ning</strong>, Nanjing Normal University
+            <br /> <strong>Zhiyao Song</strong>, Nanjing Normal University
+            <br /> <strong>Hongjun Su</strong>, Hohai University
+            <br /> <strong>Yongning Wen</strong>, Nanjing Normal University
+            <br /> <strong>Liyang Xiong</strong>, Nanjing Normal University
+            <br /> <strong>Peiqi Yang</strong>, Nanjing Normal University
+            <br /> <strong>Zhaoyuan Yu</strong>, Nanjing Normal University
+            <br /> <strong>Songshan Yue</strong>, Nanjing Normal University
+            <br /> <strong>Fengyuan Zhang</strong>, Nanjing Normal University
+            <br /> <strong>Jun Zhang</strong>, Nanjing Normal University
+            <br />
+            <p></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="Forum" style="font-family: 'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+<!--      <h3 class="cos-strong">Forum Language</h3>-->
+<!--      <div class="cos-modal">-->
+<!--        <p>English is the presenting language of the forum.</p>-->
+<!--      </div>-->
+<!--      <hr>-->
+
+      <!--        <h3 class="cos-strong">Forum Topics</h3>-->
+      <!--        <div class="cos-modal">-->
+      <!--          <p>We welcome topics in Digital Earth and Sustainable Development and also encourage papers on-->
+      <!--            new and emerging themes including but not limited to:</p>-->
+      <!--          <ul>-->
+      <!--            <li>-->
+      <!--              <div>Sustainable Development Goals Interaction Study</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Sustainable Development Process Monitoring</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Climate Change and Health</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Building Green and Resilient Cities (SDG 11)</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Clean Energy: The Transition to Low Carbon Energy</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Building Sustainable Food Systems (SDG 2)</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Sustainable use of terrestrial ecosystems</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Sustainable Development and “One Health”</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Integrated Water Resources Management (SDG 6)</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Regional Sustainable Development and Policy Guidance</div>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--              <div>Global partnerships for sustainable development</div>-->
+      <!--            </li>-->
+      <!--          </ul>-->
+      <!--        </div>-->
+      <!--        <hr>-->
+
+<!--      <h3 class="cos-strong">Keynote Speakers</h3>-->
+      <div class="cos-modal">
+        <div class="img-container1">
+          <img class="keynote-img" src="img/keynote/Michael Batty.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Michael Batty</strong>
+              <br>University College London
+              <!--                <br>E-mail:&ensp;&nbsp;<a href="bertalan@science.unideb.hu">bertalan@science.unideb.hu</a>-->
+              <!--                <br>Webpage:&ensp;&nbsp;<a href="https://sites.google.com/view/laszlobertalangeo">https://sites.google.com/view/laszlobertalangeo</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+          <img class="keynote-img" src="img/keynote/Niklas Boers.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Niklas Boers</strong>
+              <br>Technical University of Munich
+              <!--                <br>E-mail:&ensp;&nbsp;<a href="tianhuaiyu@bnu.edu.cn">tianhuaiyu@bnu.edu.cn</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+          <img class="keynote-img" src="img/keynote/Stewart Fotheringham.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Stewart Fotheringham</strong>
+              <br>Arizona State University
+              <!--                <br>E-mail:&ensp;&nbsp;<a href="bertalan@science.unideb.hu">bertalan@science.unideb.hu</a>-->
+              <!--                <br>Webpage:&ensp;&nbsp;<a href="https://sites.google.com/view/laszlobertalangeo">https://sites.google.com/view/laszlobertalangeo</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+          <img class="keynote-img" src="img/keynote/Anthony Jakeman.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Anthony Jakeman</strong>
+              <br>The Australian National University
+              <!--                <br>E-mail:&ensp;&nbsp;<a href="tianhuaiyu@bnu.edu.cn">tianhuaiyu@bnu.edu.cn</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+          <img class="keynote-img" src="img/keynote/Mei-Po Kwan.png">
+          <div class="keynote-text">
+            <p>Prof. <strong>Mei-Po Kwan</strong>
+              <br>Chinese University of Hong Kongs
+              <!--                <br>E-mail:&ensp;&nbsp;<a href="martin.sudmanns@plus.ac.at">martin.sudmanns@plus.ac.at</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+                      <img class="keynote-img" src="img/keynote/Stefan Reis.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Stefan Reis</strong>
+              <br>DLR Projektträger
+              <!--                <br>Email:&ensp;&nbsp;<a href="mailto:binley.chen@hku.hk">binley.chen@hku.hk</a>-->
+              <!--                <br>Webpage:&ensp;&nbsp;<a href="https://fuselab.hku.hk/">https://fuselab.hku.hk/</a>-->
+            </p>
+          </div>
+        </div>
+        <div class="img-container1">
+                      <img class="keynote-img1" src="img/keynote/Jinfeng Wang.jpg">
+          <div class="keynote-text">
+            <p>Prof. <strong>Jinfeng Wang</strong>
+              <br>Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences
+              <!--                <br>Phone:&ensp;&nbsp;+49 331 288 2046-->
+              <!--                <br>Webpage:&ensp;&nbsp;<a href="http://www.pik-potsdam.de/members/pradhan/">www.pik-potsdam.de/members/pradhan</a>-->
+            </p>
+          </div>
+        </div>
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Michael Batty</strong>-->
+<!--              <br>University College London-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Markus Reichtein</strong>-->
+<!--              <br>Max-Planck-Institute for Biogeochemistry-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Huadong Guo</strong>-->
+<!--              <br>Aerospace Information Research Institute, Chinese Academy of Sciences-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Bojie Fu</strong>-->
+<!--              <br>Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Qiao Wang</strong>-->
+<!--              <br>Beijing Normal University-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="img-container1">-->
+<!--          &lt;!&ndash;            <img class="keynote-img" src="img/keynote/Yongguang%20Zhang.jpg">&ndash;&gt;-->
+<!--          <div class="keynote-text">-->
+<!--            <p>Dr. <strong>Carlo Ratti</strong>-->
+<!--              <br>Massachusetts Institute of Technology-->
+<!--              &lt;!&ndash;                <br>E-mail:&ensp;&nbsp;<a href="yongguang_zhang@nju.edu.cn">yongguang_zhang@nju.edu.cn</a>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <br>Webpage:&ensp;&nbsp;<a href="https://ecors.nju.edu.cn/"> https://ecors.nju.edu.cn/</a>&ndash;&gt;-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="img-container1">
+          <div>Continuously updating……</div>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+
+  <div class="row" id="Schedule" style="font-family: 'Times New Roman'">
+<!--    <div class="col-xs-10 col-xs-offset-1">-->
+<!--      <h3 class="cos-strong">Workshop schedule outline</h3>-->
+<!--      &lt;!&ndash;        <hr>&ndash;&gt;-->
+<!--      &lt;!&ndash;        <li class="bold-text">The 1st Youth Innovation Forum on Digital Earth</li>&ndash;&gt;-->
+<!--      &lt;!&ndash;        <br/>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="col-xs-10 col-xs-offset-1">-->
+<!--      <table class="table-schedule">-->
+<!--        <thead>-->
+<!--        <th>Date</th>-->
+<!--        <th>Time</th>-->
+<!--        <th>Content</th>-->
+<!--        <th>Place</th>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--          <td>Oct 25th (Friday)</td>-->
+<!--          <td>08:00-20:00</td>-->
+<!--          <td>Registration</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td rowspan="8">Oct 26th (Saturday)</td>-->
+<!--          <td>08:30-08:40</td>-->
+<!--          <td>Opening ceremony</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>08:40-08:50</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>08:50-10:00</td>-->
+<!--          <td>Keynote Address</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>10:10-11:55</td>-->
+<!--          <td>Keynote Address</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>11:55-12:50</td>-->
+<!--          <td>Lunch</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>13:30-15:15</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>15:25-17:45</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>18:00-20:00</td>-->
+<!--          <td>Welcoming Dinner</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td rowspan="6">Oct 27th (Sunday)</td>-->
+<!--          <td>08:30-09:40</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>12:00-12:00</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>12:00-12:50</td>-->
+<!--          <td>Lunch</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>13:30-14:45</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>15:00-18:00</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>18:00-19:00</td>-->
+<!--          <td>Dinner</td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--          <td>Oct 28th (Monday)</td>-->
+<!--          <td>Field Trip</td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+  </div>
+
+  <div class="row" id="Programme" style="font-family: 'Times New Roman'">
+<!--    <div class="col-xs-10 col-xs-offset-1">-->
+<!--      <h3 class="cos-strong">Important Dates</h3>-->
+<!--      <hr>-->
+<!--      <div class="cos-modal">-->
+<!--        <ul>-->
+<!--          &lt;!&ndash;            <li>&ndash;&gt;-->
+<!--          &lt;!&ndash;              <div class="cos-strong2">Abstract due: <strong style="color:#e96600"><s>15 July, 2023.</s>&nbsp;&ensp;11 August, 2023</strong></div>&ndash;&gt;-->
+<!--          &lt;!&ndash;            </li>&ndash;&gt;-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Abstract due: <strong style="color:#e96600">July 31st, 2024.</strong></div>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Abstract acceptance notice: <strong style="color:#e96600">August 20th, 2024.</strong></div>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Early-bird registration starts on: <strong style="color:#e96600">May 1st, 2024.</strong></div>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Early-bird registration ends on: <strong style="color:#e96600">August 31st, 2024.</strong></div>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Registration starts on: <strong style="color:#e96600">September 1st, 2024.</strong></div>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <div class="cos-strong2">Registration ends on: <strong style="color:#e96600">October 21st, 2024.</strong></div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+    <!--          Session table-->
+    <!--      <div class="col-xs-10 col-xs-offset-1">-->
+    <!--        <h3 class="cos-strong">Sessions</h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <table class="table-session">-->
+    <!--            &lt;!&ndash;Session1&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th style="width: 350px;border: 1px solid black;">Conveners</th>-->
+    <!--              <th style="width: 750px;border: 1px solid black;">Session titles</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 1&ensp;&nbsp;Study on the Interaction among Sustainable Development Goals</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Junze Zhang</td>-->
+    <!--              <td class="td2">Research Center for Eco-Environmental Sciences, CAS</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Min Cao</td>-->
+    <!--              <td class="td2">Nanjing Normal University</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session2&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 2&ensp;&nbsp;Big Earth Data in Promote of Marine and Coastal Sustainable Development (SDG 14)</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Mingming Jia</td>-->
+    <!--              <td class="td2">Northeast Institute of Geography and Agroecology, CAS</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Hongsheng Zhang</td>-->
+    <!--              <td class="td2">The University of Hong Kong</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session3&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 3&ensp;&nbsp;Spatial Technologies Facilitate the Conservation and Sustainable Development-->
+    <!--                of Natural and Cultural Heritage (SDG11 &SDG15)-->
+    <!--              </th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Lei Luo</td>-->
+    <!--              <td class="td2">International Research Center of Big Data for Sustainable Development Goals</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Jinhu Bian</td>-->
+    <!--              <td class="td2">Institute of Mountain Hazards and Environment, CAS</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session4&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 4&ensp;&nbsp;Intelligent Monitoring and Evaluation of Agricultural Land Systems</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Lijun Zuo</td>-->
+    <!--              <td class="td2">Aerospace Information Research Institute, CAS</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Qiangyi Yu</td>-->
+    <!--              <td class="td2">Institute of Agricultural Resources and Regional Planning, CAAS </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Baodong Xu</td>-->
+    <!--              <td class="td2">Huazhong Agricultural University</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session5&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 5&ensp;&nbsp;Regional Sustainable Development and Sustainability Transitions</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Shuangshuang Tang</td>-->
+    <!--              <td class="td2">Nanjing Normal University </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Xiaohui Hu</td>-->
+    <!--              <td class="td2">Nanjing Normal University </td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Xiyan Mao</td>-->
+    <!--              <td class="td2">Nanjing University</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session6&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 6&ensp;&nbsp;Regional Sustainable Development and Strategies</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Yali Liu</td>-->
+    <!--              <td class="td2">Beijing Forestry University</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Xutong Wu</td>-->
+    <!--              <td class="td2">Beijing Normal University</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session7&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 7&ensp;&nbsp;Geospatial Big Data Analytics and AI for Public Health</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Wei Luo</td>-->
+    <!--              <td class="td2">National University of Singapore</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Ling Yin</td>-->
+    <!--              <td class="td2">Shenzhen Institutes of Advanced technology, CAS</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session8&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 8&ensp;&nbsp;Big Earth Data in Support of Sustainable Urban Development</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Zhongchang Sun</td>-->
+    <!--              <td class="td2">International Research Center of Big Data for Sustainable Development Goals</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Zhonghao Zhang</td>-->
+    <!--              <td class="td2">Shanghai Normal Univerisity</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session9&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 9&ensp;&nbsp;Advancements and Challenges in One Health Studies leveraging Big Earth Data</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Jinwei Dong</td>-->
+    <!--              <td class="td2">Institute of Geographic Sciences and Natural Resources Research, CAS</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Cunrui Huang</td>-->
+    <!--              <td class="td2">Tsinghua University</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session10&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 10&ensp;&nbsp;Key Technologies and Paths for Achieving the Global SDG7 Affordable and Clean Energy Goal</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Mingquan Wu</td>-->
+    <!--              <td class="td2">Aerospace Information Research Institute, CAS</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Rui Zhu</td>-->
+    <!--              <td class="td2">Institute of High Performance Computing, Agency for Science, Technology and Research, Singapore</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session11&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 11&ensp;&nbsp;Novel Monitoring Methods in Remote Sensing of Surface Water</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. László Bertalan</td>-->
+    <!--              <td class="td2">University of Debrecen, Hungary</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Dr. Junsheng Li</td>-->
+    <!--              <td class="td2">Aerospace Information Research Institute, CAS</td>-->
+    <!--            </tr>-->
+    <!--            &lt;!&ndash;Session12&ndash;&gt;-->
+    <!--            <tr>-->
+    <!--              <th colspan="2">Session 12&ensp;&nbsp;Climate Change and Environmental Public Health</th>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--              <td class="td1">Prof. Ming Luo</td>-->
+    <!--              <td class="td2">Sun Yat-Sen University</td>-->
+    <!--            </tr>-->
+    <!--          </table>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <br>-->
+    <!--      <br>-->
+
+    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">
+      <h3 class="cos-strong">Call for Session Proposals</h3>
+      <hr>
+      <div class="cos-modal">
+        <p>
+          We are currently accepting session proposals for the 3rd International Workshop on Geographic Modeling and
+          Simulation, themed 'Modeling and Simulation for A Sustainable World,' to be held in Nanjing, China,
+          from <strong style="color:#e96600">October 18th to 21st, 2024</strong>. The deadline for submitting
+          session proposals is <strong style="color:#e96600">March 31st, 2024</strong>. Please send your proposals
+          via email to Dr. Zhang at <a href="mailto:zhangfengyuangis@163.com">zhangfengyuangis@163.com</a> /
+          <a href="mailto:zhangfengyuan@nnu.edu.cn">zhangfengyuan@nnu.edu.cn</a>. For more
+          information on submission guidelines and proposal requirements, please visit our website
+          [<a href="https://geomodeling.njnu.edu.cn/iwgms2024">https://geomodeling.njnu.edu.cn/iwgms2024</a>] or
+          contact us for further assistance.
+        </p>
+        <!--          <ul>-->
+        <!--            <li>-->
+        <!--              <div class="cos-strong2">To organize a session, please contact Dr. Jian Lin (<a href="mailto:jianlin@cuhk.edu.hk">jianlin@cuhk.edu.hk</a>).</div>-->
+        <!--            </li>-->
+        <!--            <li>-->
+        <!--              <div class="cos-strong2">The Session proposal submission deadline: <strong style="color:#e96600">15 June, 2023.</strong></div>-->
+        <!--            </li>-->
+        <!--            <li>-->
+        <!--              <div class="cos-strong2">Session proposals must include:-->
+        <!--                <ol>-->
+        <!--                  <li>Proposed session title.</li>-->
+        <!--                  <li>Information of session chair(s): name, professional title (Dr., Prof., …), affiliation, email, other information.</li>-->
+        <!--                  <li>Information of speakers: name, professional title (Dr., Prof., …), title of speech, affiliation, email, abstract.</li>-->
+        <!--                </ol>-->
+        <!--              </div>-->
+        <!--            </li>-->
+        <!--            <div>-->
+        <!--            </div>-->
+        <!--          </ul>-->
+      </div>
+    </div>
+    <!--      Abstract Solicitation-->
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Abstract Solicitation</h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal">-->
+    <!--           <ul>-->
+    <!--             <div>1.&ensp;To present your research, authors can either submit an ABSTRACT or a full PAPER through the online submission system:&ensp;-->
+    <!--               <a href="http://isde_ysin2023.digitalearth-isde.org/">http://isde_ysin2023.digitalearth-isde.org/</a></div>-->
+    <!--             <div>2.&ensp;The length of an abstract is 200 to 300 words in English. </div>-->
+    <!--             <div>3.&ensp;The abstract submission deadline: 11 August, 2023</div>-->
+    <!--           </ul>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">
+      <h3 class="cos-strong">Excellent Paper Award</h3>
+      <hr>
+      <div class="cos-modal">
+        <p>Excellent Paper Awards have been established to honor outstanding research presented at the workshop.
+          All award-winners will be selected by the awards committee through a competitive and rigorous evaluating
+          procedure.
+          <!--                <a href="http://isde_ysin2023.digitalearth-isde.org/">http://isde_ysin2023.digitalearth-isde.org/</a>-->
+        </p>
+<!--        <div class="cos-strong2"><strong>Application:</strong></div>-->
+<!--        <p>-->
+<!--          To apply for the Excellent Paper Award, authors must submit a full-length research paper (5000-8000 words).-->
+<!--          The paper being submitted for Excellent Paper Award evaluation must not have been published or be under-->
+<!--          consideration for publication elsewhere. All submissions must be original work and adhere to the provided-->
+<!--          formatting and submission guidelines. Papers will be evaluated based on their originality, significance,-->
+<!--          technical quality, and relevance to the theme of the award.-->
+<!--        </p>-->
+        <!--              <li style="margin-left: 30px">The paper being submitted for EPA evaluation must not have been published.</li>-->
+        <!--              <li style="margin-left: 30px">EPA applicants must orally present their papers in the forum.</li>-->
+        <!--              <li style="margin-left: 30px">A candidate should be a graduate student, or a young scholar less than 45 ages. </li>-->
+        <!--              <li style="margin-left: 30px">The winners of EPA will be announced in the closing ceremony. </li>-->
+      </div>
+    </div>
+
+    <!--      Young Scientist Award-->
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Young Scientist Award</h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <ul>-->
+    <!--            <p>The Young Scientist Innovation Network (YSIN) Young Scientist Awards are established by the International-->
+    <!--              Society for Digital Earth (ISDE) to recognize and honor outstanding young scientists who are proactive and-->
+    <!--              passionate in the field of Digital Earth and who develop crucial concepts and innovative technologies-->
+    <!--              to affect our society and environment.</p>-->
+    <!--            <br/>-->
+    <!--            <p>Each year, 2-3 award-winners will be selected by the awards committee through the competitive and-->
+    <!--              rigorous evaluating procedure. The rules and criteria for the selection include, but are not limited-->
+    <!--              to, the following: </p>-->
+    <!--            <div class="cos-modal">-->
+    <!--              <li style="margin-left: 30px">Outstanding accomplishments of young individuals</li>-->
+    <!--              <li style="margin-left: 30px">Actively serving and contributing to the field of Digital Earth in particular and the scientific-->
+    <!--                community in general</li>-->
+    <!--              <li style="margin-left: 30px">Age <= 45 & Member of YSIN-ISDE</li>-->
+    <!--            </div>-->
+    <!--            <br/>-->
+    <!--            <p>Applicants should submit his/her detailed CV and Statement of Application (which outlines his/her-->
+    <!--              accomplishments and contributions) to <a href="mailto:ISDE_YSIN@163.com">ISDE_YSIN@163.com</a> before 11 August, 2023. The winners of the-->
+    <!--              Young Scientist Award will be announced in the closing ceremony.</p>-->
+    <!--          </ul>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+  </div>
+
+  <div class="row" id="Registration" style="font-family: 'Times New Roman'">
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Registration Instructions<a id="RegisterFee" href="submission.html" target="_blank"><button style=""  class="btn btn-danger submit">Registration Now</button></a></h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <li>Stay tuned for future updates</li>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Registration Arrangement<a id="RegisterArr" href="submission.html" target="_blank"></a></h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <li>Stay tuned for future updates</li>-->
+    <!--        </div>-->
+    <!--      </div>-->
+<!--    <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+<!--      <h3 class="cos-strong">Registration Fees<a id="RegisterIns" href="submission.html" target="_blank"></a></h3>-->
+<!--      <hr>-->
+<!--      <div class="cos-modal">-->
+<!--        <table class="table-registration">-->
+<!--          <thead>-->
+<!--          <th>Type</th>-->
+<!--          <th>US$ / RMB￥</th>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--          <tr>-->
+<!--            <td>Student (Early Bird)</td>-->
+<!--            <td>$125 / ￥1000</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Student</td>-->
+<!--            <td>$170 / ￥1200</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Regular (Early Bird)</td>-->
+<!--            <td>$230 / ￥1600</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td>Regular</td>-->
+<!--            <td>$280 / ￥2000</td>-->
+<!--          </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!--      Payment Methods-->
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Payment Methods<a id="PaymentMethods" href="submission.html" target="_blank"></a></h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal" style="margin-top:30px">-->
+    <!--          <div class="col-md-7" style="margin-left:20px">-->
+    <!--            <div class="cos-modal">-->
+    <!--              <li class="cos-strong">Electronic Funds Transfer(EFT)</li>-->
+    <!--              <p></p>-->
+    <!--              <p>Account Name: The International Society for Digital Earth(ISDE) &nbsp; (账户名称：国际数字地球协会)<p>-->
+    <!--              <p></p>-->
+    <!--              <p>Account opening bank:&ensp;&nbsp;INDUSTRIAL AND COMMERCIAL BANK OF CHINA(ICBC), Beijing North Beach Sub-branch &nbsp; (开户行：中国工商银行北京北沙滩支行) </p>-->
+    <!--              <p></p>-->
+    <!--              <p>Account Number:&ensp;&nbsp;0200244509200015729 &nbsp;（账号：0200244509200015729）</p>-->
+    <!--              <li class="cos-strong">Credit Card</li>-->
+    <!--              <p></p>-->
+    <!--              <p>Payment by credit card on the day of registration&nbsp;(rates refer to the standard after June 21)</p>-->
+    <!--              <p>Electronic invoices are available.</p>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="col-md-4" style="border-left: 1px solid #1b6d85 ;margin-left:20px">-->
+    <!--            &lt;!&ndash;<p style="margin-left:15px">1.<b>One Institution,One Enter.</b></p>&ndash;&gt;-->
+    <!--            <p style="margin-left:15px">1.&ensp;Attendees should pay the registration fee according to the Registration-Registration Fee.</p>-->
+    <!--            <p style="margin-left:15px">(<span style="font-size:18px;color: red;font-weight: bold;">*</span>)2.&ensp;If paying through EFP, be sure to <strong style="color:red">note conference information-->
+    <!--              (ISDE_YSIN), your name, phone number and affiliation</strong> when paying registration fee,-->
+    <!--              otherwise it will not be possible to verify your participation information</p>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      Visa Reminder-->
+    <!--      <div class="col-xs-10 col-xs-offset-1" style=" margin-top: 10px ">-->
+    <!--        <h3 class="cos-strong">Visa Reminder<a id="VisaReminder" href="submission.html" target="_blank"></a></h3>-->
+    <!--          <hr>-->
+    <!--          <div class="cos-modal">-->
+    <!--            <p>-->
+    <!--              Residents of most countries require a visa to enter the People's Republic of China. Please check the-->
+    <!--              details of your visa application with the Chinese Embassy or Consulate General or the China Visa-->
+    <!--              Application Center (CVASC) in your place of residence as early as possible. For some visa applications,-->
+    <!--              the process may take some time to complete, depending on your country of origin and certain visa-->
+    <!--              restrictions. Therefore, it is recommended that you apply at least one month prior to your departure-->
+    <!--              for China.-->
+    <!--            <p>-->
+    <!--            <p>-->
+    <!--              Generally, a tourist visa (L visa) is sufficient to allow you to attend the conference. If you apply-->
+    <!--              for a tourist visa, you do not need to present a letter of invitation from the conference organizer.-->
+    <!--              However, if a business visa (F visa) is required, you may need a letter of invitation.-->
+    <!--            <p>-->
+    <!--            <p>-->
+    <!--              Generally, a tourist visa (L visa) is sufficient to allow you to attend the conference. If you apply-->
+    <!--              for a tourist visa, you do not need to present a letter of invitation from the conference organizer.-->
+    <!--              However, if a business visa (F visa) is required, you may need a letter of invitation.-->
+    <!--            <p>-->
+    <!--            <p>-->
+    <!--              ISDE_YSIN2023 can issue you an invitation letter with signature and official seal for your visa application.-->
+    <!--              If required, please login to your account to complete the conference registration and then send us a-->
+    <!--              screenshot of your personal information page.-->
+    <!--            <p>-->
+
+    <!--            <p>-->
+    <!--              <strong style="color:red">If you are having difficulty obtaining a visa and need an official invitation-->
+    <!--                letter from an authorized entity, please contact us by email at ISDE_YSIN@163.com and submit the-->
+    <!--                following required information:</strong>-->
+    <!--            <p>-->
+    <!--            <li><strong style="color:red">A scanned copy of the photo page of the passport;</strong></li>-->
+    <!--            <li><strong style="color:red">A letter confirming registration for ISDE_YSIN2023 forum;</strong></li>-->
+    <!--            <li><strong style="color:red">A scanned copy of a work or student ID card;</strong></li>-->
+    <!--            <li><strong style="color:red">Address and phone/mobile number.</strong></li>-->
+
+    <!--            <br/>-->
+    <!--            <span style="font-weight: bolder; font-size:22px">Note:</span><p>-->
+    <!--              According to the relevant regulations, the local organizer cannot provide an invitation letter-->
+    <!--              for the accompanying person to the conference. We recommend that accompanying persons apply for-->
+    <!--              a tourist visa, which will be much easier and require less paperwork.-->
+    <!--            </p>-->
+
+    <!--            <br/>-->
+    <!--            <span style="font-weight: bolder; font-size: 22px">Caution:</span><br>-->
+    <!--              1.&ensp;Please provide your above documents at one time. Multiple submissions may render the application invalid.<br>-->
+    <!--              2.&ensp;You should ensure that all information provided is true and correct.<br>-->
+    <!--              3.&ensp;In the visa invitation letter, we can only guarantee your stay in Beijing-->
+    <!--                for the duration of the conference.<br>-->
+    <!--              4.&ensp;General visa information should be obtained zfrom your local Chinese Embassy or Consulate.-->
+    <!--                In order to facilitate travel between China and foreign countries, new adjustments to the Chinese-->
+    <!--                visa will be made as of 12:00 noon on March 14, 2023 as follows:<br>-->
+    <!--              <li>Entrants may enter China with a valid visa issued before March 28, 2020.</li>-->
+    <!--              <li>You can apply for all categories of China visas, including tourist visas (L visas).-->
+    <!--                For specific visa applications and inquiries, please contact the China Visa Application-->
+    <!--                Service Center <a href="https://www.visaforchina.org/">https://www.visaforchina.org/</a>-->
+    <!--                directly in your area.</li>-->
+
+    <!--            <br/>-->
+    <!--            <p>Guidance on outbreak prevention and control measures for travelers to China: Based on the current-->
+    <!--              status of the COVID-19 outbreak and to facilitate people-to-people communication, effective March 1,-->
+    <!--              2023 (local time), air passengers from 17 countries flying directly to China may submit Rapid Antigen-->
+    <!--              Test (RAT, including RAT Home Test Kit) results in lieu of PCR testing. These 17 countries are Russia,-->
+    <!--              New Zealand, Cambodia, Sri Lanka, Malaysia, South Africa, Hungary, Thailand, Singapore, Philippines,-->
+    <!--              Cambodia, Malaysia, Sri Lanka, United Arab Emirates, Egypt, South Africa and Switzerland. To avoid-->
+    <!--              travel delays and disruptions, we advise all travelers to carefully read and follow the instructions-->
+    <!--              in the guidelines published on the official website of the Chinese Embassy in your country.<p>-->
+    <!--          </div>-->
+    <!--      </div>-->
+    <br/>
+    <!-- <div class="col-xs-10 col-xs-offset-1">
+      <h4 class="cos-strong">Payment Methods</h4>
+      <hr>
+      <div class="cos-modal">
+        <ul>
+          <li>
+            <div class="cos-strong2">国内支付</div>
+            <strong>注册费人民币价格已公布，中方参会代表转账支付。</strong>
+            <br> 如转账支付请您在转账时备注以下信息：会议登记标识（如：IWOGMS），参会者姓名，单位
+            <br> 单位：南京师范大学科技实业集团公司仙林宾馆
+            <br> 卡号：3200 0667 8018 0100 28669
+            <br> 银行：交行仙林大学城支行
+            <br> 行号：301301000781
+          </li>
+          <li>
+            <div class="cos-strong2">Remittance overseas</div>
+            Please write down
+            <i>IWOGMS conference registration (eg. IWOGMS), your name and your institute/company name</i> when remitting.
+            <br>
+            <strong>USD:</strong>
+            <br> Beneficiary's Bank : China Merchants Bank, H.O. Shenzhen
+            <br> （SWIFT CODE: CMBCCNBSXXX）
+            <br> Beneficiary's a/c no.： 11921502632901
+            <br> Beneficiary : China e-Sciences tech Ltd
+            <br>
+
+            <strong>EUR:</strong>
+            <br> Beneficiary's Bank : China Merchants Bank, H.O. Shenzhen
+            <br> （SWIFT CODE: CMBCCNBSXXX）
+            <br> Beneficiary's a/c no.： 110921502635801
+            <br> Beneficiary China e-Sciences tech Ltd
+            <br>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="row" id="Location" style="font-family: 'Times New Roman'">
+    <!--      <div class="col-xs-10 col-xs-offset-1">-->
+    <!--        <h3 class="cos-strong">Hotel Information</h3>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal-big">-->
+    <!--          <li>Beijing Friendship Hotel</li>-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--        <div class="img-container1">-->
+    <!--          <img class=place-img1 src="img/Hotel/FriendshipHotel1.jpg" alt="Beijing-Friend-Hotel"><img class=place-img2 src="img/Hotel/Hotelinside.jpg" alt="Beijing-Friend-Hotel"><img class=place-img3 src="img/Hotel/FriendshipHotel2.png" alt="Beijing-Friend-Hotel">-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <p>-->
+    <!--            The 1st Youth Innovation Forum on Digital Earth will be held at the Beijing-Friendship-Hotel.-->
+    <!--            Beijing-Friendship-Hotel was built in 1954, and from the beginning of its construction. Over-->
+    <!--            the years, Friendship Hotel has not only continued the reception of foreign experts, but also-->
+    <!--            shouldered the service and guarantee tasks of various political and foreign affairs activities.-->
+    <!--          </p>-->
+    <!--          <p>-->
+    <!--          <p>-->
+    <!--            Guest rooms of Beijing-Friendship-Hotel are divided into three accommodation buildings, namely,-->
+    <!--            Jingbin Building, Yingbin Building and Yibin Building, with more than 700 standard rooms, business-->
+    <!--            rooms and luxury suites of different grades and specifications. The rooms range in size from 18-->
+    <!--            square meters to 70 square meters and are designed in either a simple and bright style, suitable-->
+    <!--            for business travel, or a light and extravagant atmosphere, highlighting the richness of history-->
+    <!--            and revealing traditional national characteristics and sentiments in details.-->
+    <!--          </p>-->
+    <!--          <p>-->
+    <!--            Beijing-Friendship-Hotel is also equipped with the infrastructure and conditions to undertake-->
+    <!--            various domestic and foreign conferences and business negotiations. A variety of types of rooms-->
+    <!--            and meeting rooms and multi-functional halls provide more choices for guests to hold meetings-->
+    <!--            and convention activities of various scales.-->
+    <!--          </p>-->
+    <!--        </div>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal-big">-->
+    <!--          <li>Route To Hotel</li>-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--&lt;!&ndash;        <div class="img-container2">&ndash;&gt;-->
+    <!--&lt;!&ndash;          <img class=place-img src="img/Hotel/Map.png" alt="Route">&ndash;&gt;-->
+    <!--&lt;!&ndash;        </div>&ndash;&gt;-->
+    <!--        <div class="cos-modal" name="map_container" style="border: 1px solid #c5c5c5; border-radius: 10px; padding: 20px 25px;">-->
+    <!--          <div id="map"></div>-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--        <div class="cos-modal" name="airport" style="border: 1px solid #c5c5c5; border-radius: 10px; padding: 20px 25px;">-->
+    <!--          <img src="img/sign/plane.png" width="25" height="25"><strong>&ensp;&nbsp;From Airport</strong>-->
+    <!--          <br/>-->
+    <!--          <br/>-->
+    <!--          <div class="cos-modal">-->
+    <!--            <p style="margin-left: 30px;">✧&ensp;Beijing Capital International Airport</p>-->
+    <!--            <div>-->
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Taxi:&ensp;About RMB 100,</strong>&ensp;The cost is subject to change depending on actual traffic conditions.</li>-->
+    <!--                <p style="margin-left: 60px;">Taxi Locations:-->
+    <!--                  <br>T1: Outside Gate 1 on the F1;-->
+    <!--                  <br>T2: outside Gates 5 to 9 on F1;-->
+    <!--                  <br>T3: Please refer to the signs inside the terminal building.</p>-->
+    <!--              </div>-->
+
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Airport Shuttle:&ensp;RMB 24</strong></li>-->
+    <!--                <p style="margin-left: 60px;">Pick-up point: Capital Airport T2. Take the airport bus Princess Tomb line, after 9 stops, arrive at Friendship Hotel.<p>-->
+    <!--              </div>-->
+
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Metro:</strong></li>-->
+    <!--                <p style="margin-left: 60px;"><strong>1)&ensp;</strong>Airport Express (get off at Sanyuanqiao) – Subway 10 (get off at Haidian Huangzhuang) - Subway 4 (get off at Renmin University) <p>-->
+    <!--                <p style="margin-left: 60px;"><strong>2)&ensp;</strong>Airport Express (get off at Dongzhimen) – Subway 2 (get off at Xizhimen) - Subway 4 (get off at Renmin University)  <p>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <br/>-->
+    <!--          <div class="cos-modal">-->
+    <!--            <p style="margin-left: 30px;">✧&ensp;Beijing Daxing International Airport</p>-->
+    <!--            <div>-->
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Taxi:&ensp;About RMB 200,</strong>&ensp;The cost is subject to change depending on actual traffic conditions.</li>-->
+    <!--                <p style="margin-left: 60px;">Taxi pick-up point: 1st floor of the terminal</p>-->
+    <!--              </div>-->
+
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Airport Shuttle:&ensp;RMB 24</strong></li>-->
+    <!--                <p style="margin-left: 60px;">Take the airport bus Zhongguancun line, after 5 stops, walk about 200m to the Friendship Hotel.<p>-->
+    <!--              </div>-->
+
+    <!--              <div class="cos-modal">-->
+    <!--                <li style="margin-left: 60px;"><strong>Metro:</strong></li>-->
+    <!--                <p style="margin-left: 60px;"><strong>1)&ensp;</strong>Daxing International Airport Line(get off at Caoqiao) - Subway 19 (get off at Ping'anli) - Subway 4 (get off at Renmin University)<p>-->
+    <!--                <p style="margin-left: 60px;"><strong>2)&ensp;</strong>Daxing International Airport Line(get off at Caoqiao) - Subway 10 (get off at Jiao Men West) - Subway 4 (get off at Renmin University) <p>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--        <div class="cos-modal" name="Railwaystation" style="border: 1px solid #c5c5c5; border-radius: 10px; padding: 20px 25px;">-->
+    <!--          <img src="img/sign/train.png" width="25" height="25"><strong>&ensp;&nbsp;From Railway Station</strong>-->
+    <!--          <br/>-->
+    <!--          <br/>-->
+    <!--          <div class="cos-modal">-->
+    <!--            <div style="margin-left: 30px;">✧&ensp;Beijing Railway Station</div>-->
+    <!--            <div>-->
+    <!--              <div style="margin-left: 60px;"><strong>1)&ensp;</strong>Subway 2 (get off at Xuanwumen) - Subway 4 (get off at Renmin University)</div>-->
+    <!--              <div style="margin-left: 60px;"><strong>2)&ensp;</strong>Subway 2 (get off at Xizhimen) – Subway 13 (get off at Dazhongsi) - Bus No. 921 (get off at Sitongqiaoxi)</div>-->
+    <!--            </div>-->
+    <!--            <br/>-->
+    <!--          </div>-->
+
+    <!--          <div class="cos-modal">-->
+    <!--            <div style="margin-left: 30px;">✧&ensp;Beijing WEST Railway Station</div>-->
+    <!--            <div class="cos-modal">-->
+    <!--              <div style="margin-left: 60px;"><strong>1)&ensp;</strong>Subway 9 (get off at Guojiatushuguan) - Subway 4 (get off at Renmin University)</div>-->
+    <!--              <div style="margin-left: 60px;"><strong>2)&ensp;</strong> Subway 9 (get off at Guojiatushuguan) - Bus No. 320 (get off at Chinese academy of agricultural sciences)</div>-->
+    <!--            </div>-->
+    <!--            <br/>-->
+    <!--          </div>-->
+
+    <!--          <div class="cos-modal">-->
+    <!--            <div style="margin-left: 30px;">✧&ensp;Beijing South Railway Station</div>-->
+    <!--            <div class="cos-modal">-->
+    <!--              <div style="margin-left: 60px;"><strong>1)&ensp;</strong>Subway 4 (get off at Renmin University)</div>-->
+    <!--              <div style="margin-left: 60px;"><strong>2)&ensp;</strong>Bus No. 300 (get off at Hepingdongqiao)</div>-->
+    <!--            </div>-->
+    <!--            <br/>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--        <hr>-->
+    <!--        <div class="cos-modal-big">-->
+    <!--          <li><strong>Neighboring hotels</strong></li>-->
+    <!--        </div>-->
+    <!--        <br/>-->
+    <!--        <div class="cos-modal">-->
+    <!--          <div style="margin-left: 30px">-->
+    <!--            <div><strong>All Seasons Hotel (Beijing Zhongguancun Renmin University Branch, Beijing-->
+    <!--              Renmin University Subway Station Branch)</strong></div>-->
+    <!--            <p></p>-->
+    <!--            <div><strong>Contact: 010-82656868</strong></div>-->
+    <!--            <p></p>-->
+    <!--            <p>All Seasons Hotels was established in 2010 and is part of the Huazhu Group, China's-->
+    <!--              leading mid-range hotel brand. It now covers 31 provincial-level administrative regions-->
+    <!--              in China, with more than 1,100 hotels in operation. All Seasons creates quality experiences-->
+    <!--              through family and friend services, and enhancing the quality of life on the go for 400-->
+    <!--              million middle-class people.</p>-->
+    <!--            <div class="img-container1">-->
+    <!--              <img src="img/Hotel/quanji1.jpg" style="position: relative;width:500px;height:300px;float:left;margin-left: 10%;border-radius:2%;border: 2px solid white;	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;">-->
+    <!--              <img src="img/Hotel/quanji2.jpg" style="position: relative;width:500px;height:300px;float:left;margin-right: 10%;border-radius:2%;border: 2px solid white;box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <br/>-->
+    <!--          <div style="margin-left: 30px">-->
+    <!--            <div><strong>Qingyue Hotel (Beijing Zhongguancun University of Technology)</strong></div>-->
+    <!--            <p></p>-->
+    <!--            <div><strong>Contact: 010-88551658</strong></div>-->
+    <!--            <p></p>-->
+    <!--            <p>The hotel is a medium to high-end business hotel with a combination of dining and accommodation,-->
+    <!--              and is also equipped with a modern intelligent guest control voice system, bringing you a comfortable-->
+    <!--              experience with innovative technology.The overall design of the hotel is youthful and stylish, and is-->
+    <!--              equipped with a nutritious breakfast buffet with Fujian Putian specialities.</p>-->
+    <!--            <div class="img-container1">-->
+    <!--              <img src="img/Hotel/qingyue1.jpg" style="position: relative;width:500px;height:300px;float:left;margin-left: 10%;border-radius:2%;border: 2px solid white;box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;">-->
+    <!--              <img src="img/Hotel/qingyue2.jpg" style="position: relative;width:500px;height:300px;float:left;margin-right: 10%;border-radius:2%;border: 2px solid white;box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;">-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+<!--    <div class="col-xs-10 col-xs-offset-1">-->
+<!--      <h3 class="cos-strong">Hotel Information</h3>-->
+<!--      <hr>-->
+<!--      <div class="cos-modal">-->
+<!--        <p>To be updated</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+  <!--    <div class="row" id="About" style="font-family: 'Times New Roman'">-->
+  <!--      <div class="col-xs-10 col-xs-offset-1">-->
+  <!--        <h3 class="cos-strong">About ISDE Young Scientist Innovation Network</h3>-->
+  <!--        <hr>-->
+  <!--        <div class="cos-modal">-->
+  <!--          <p>-->
+  <!--            The International Society for Digital Earth (ISDE) is a non-governmental organization-->
+  <!--            to disseminate the vision of Digital Earth and the mission of benefiting society by-->
+  <!--            promoting the development and realization of Digital Earth. The International Society-->
+  <!--            for Digital Earth - Young Scientist Innovation Network (ISDE-YSIN) aims to empower-->
+  <!--            young scientists in the field of Digital Earth, promote the development of crucial-->
+  <!--            concepts and innovative technologies of Digital Earth, and contribute to the global-->
+  <!--            sustainable development by using digital technologies.-->
+  <!--          </p>-->
+  <!--        </div>-->
+  <!--        <br>-->
+  <!--        <h3 class="cos-strong">ISDE Membership Application</h3>-->
+  <!--        <hr>-->
+  <!--        <div class="cos-modal">-->
+  <!--          <p>-->
+  <!--            The concept of ISDE-YSIN is open to everyone in a no-exclusive manner, cultural diversity,-->
+  <!--            gender equality, and a good balanced worldwide representation is encouraged. Any person wishing-->
+  <!--            to join the Network shall submit an application form and a CV to the ISDE-YSIN Secretariat-->
+  <!--            (ISDE_YSIN@163.com) with copy to the ISDE Secretariat (membership@radi.ac.cn). Please find-->
+  <!--            the ISDE-YSIN Application Form below.-->
+  <!--          </p>-->
+  <!--          <li>-->
+  <!--            <a href="doc/ISDE-YSIN%20Application%20Form.docx" download>ISDE-YSIN Application Form</a>-->
+  <!--          </li>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+    </div>
+
+  <div class="row" id="Contact-information" style="font-family: 'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3 class="cos-strong">Contact Us</h3>
+      <hr>
+      <h4 class="cos-strong">Programme Coordinator</h4>
+      <div class="cos-modal">
+        <li>
+          Dr. Fengyuan Zhang, Nanjing Normal University&ensp;&nbsp;<a href="mailto:zhangfengyuangis@163.com">zhangfengyuangis@163.com</a> / <a href="mailto:zhangfengyuan@nnu.edu.cn">zhangfengyuan@nnu.edu.cn</a>
+        </li>
+        <li>
+          Dr. Zaiyang Ma, Nanjing Normal University&ensp;&nbsp;<a href="mailto:zy_ma327@126.com">zy_ma327@126.com</a>
+        </li>
+      </div>
+      <br>
+      <h4 class="cos-strong">Conference Secretariat</h4>
+      <div class="cos-modal">
+        <li>
+          Miss. Zhiyi Zhu, Nanjing Normal University&ensp;&nbsp;<a href="mailto:zhuzhiyi1030@163.com">zhuzhiyi1030@163.com</a>
+        </li>
+        <li>
+          Mr. Yuanqing He, Nanjing Normal University&ensp;&nbsp;<a href="mailto:heyuanqing007@163.com">heyuanqing007@163.com</a>
+        </li>
+      </div>
+
+      <!--        <h3 class="cos-strong">Wechat Group</h3>-->
+      <!--        <hr>-->
+      <!--        <div class="cos-modal">-->
+      <!--          <li>Join the WeChat group of the meeting</li>-->
+      <!--          <div class="img-container1">-->
+      <!--            <img class="Wechat-img" src="img/WeChatGroup/WeChatGroup.png">-->
+      <!--          </div>-->
+      <!--        </div>-->
+    </div>
+    <!-- <div class="col-xs-8 col-xs-offset-2">
+      <br />
+      <br />
+      <br />
+      <h4 class="cos-strong">Call for Abstract</h4>
+      <hr>
+      <div class="cos-modal">
+        <p>
+          You are kindly invited to submit paper abstracts related to the theme on the workshop. Abstracts should be submitted electronically
+          in English and should be less than 300 words. Please submit the abstract with the following details:
+        </p>
+        <p>Abstracts must include:</p>
+        <ul>
+          <li>Title and authors by surname followed by initials and indicate the reporter by underlining their names</li>
+          <li>Author’s contact details (institute/company name, full address, telephone no., fax no. and email)</li>
+          <li>Keywords</li>
+        </ul>
+        <p>Please send your paper abstracts to
+          <a href="mailto:yutingli123@163.com">yutingli123@163.com</a> or
+          <a href="mailto:cherryshen212@gmail.com">cherryshen212@gmail.com</a>. The email subject contained your name and institution will help us confirm your
+          infomation.
+        </p>
+        <p>
+          <strong>IMPORTANT DATES:</strong>
+        </p>
+        <p>
+          <strong>18 June, 2017</strong>&nbsp;&nbsp;&nbsp;Deadline for submitting abstracts for papers</p>
+        <p>
+          <strong>20 June, 2017</strong>&nbsp;&nbsp;&nbsp;Notification of the results of the acception</p>
+        <p></p>
+      </div>
+    </div> -->
+  </div>
+  <div class='container-fluid footer-container text-center'>
+    <hr>
+    <span style="font-family:arial;">Copyright &copy;2018 NNU</span>
+    <div>
+      <a href="http://en.njnu.edu.cn/">http://en.njnu.edu.cn/</a>
+    </div>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript" src="ref/jquery.min.js"></script>
+<script type="text/javascript" src="ref/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>

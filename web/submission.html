@@ -1,0 +1,891 @@
+<html xmlns:margin-top="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>ISDE_YSIN_submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/table_style.css">
+    <link rel="stylesheet" href="ref/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="ref/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="css/DT_bootstrap.css">
+    <link rel="stylesheet" href="ref/iCheck/skins/flat/green.css">
+    <!--<link rel="stylesheet" href="ref/country-select/css/reset.css">-->
+    <!--<link rel="stylesheet" href="ref/country-select/css/select_gj.css">-->
+
+    <link rel="stylesheet" href="css/fileinput.css">
+    <link rel="stylesheet" href="css/universal.css">
+
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        hr {
+            margin-top: 0px;
+        }
+
+        .marginLeft {
+            margin-left: 140px;
+        }
+        .submitLabel{
+            width:140px;
+        }
+        .marginTop{
+            margin-top: 15px;
+        }
+        .nnu{
+            position: absolute;right:0%;bottom: 0%;
+        }
+        @media screen and (max-width: 700px) {
+            .nnu{
+                position: relative;right:0%;bottom: 0%;
+            }
+        }
+
+        @media screen and (max-width: 1905px) {
+            .marginLeft {
+                margin-left: 0px;
+            }
+            .submitLabel{
+                width:100%;
+            }
+            .marginTop{
+                margin-top: 0px;
+            }
+        }
+
+        @media screen and (max-width: 1816px){
+            .register-input{
+                width:100%
+            }
+            .register-marginLeft{
+                margin-left: 0px;
+            }
+        }
+
+        ins.iCheck-helper{
+            z-index: -1;
+        }
+
+    </style>
+
+</head>
+
+<body onkeydown="keyLogin();">
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="resetPW" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background: deepskyblue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="color:aliceblue">
+                    Retrieve Rassword
+                </h4>
+            </div>
+            <div class="modal-body" style="font-size: 20px;overflow: hidden">
+
+                <div class="form-group col-sm-12">
+                    <label class="col-sm-12 control-label">Email :</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control"
+                            id="resetPW_email"/>
+                    </div>
+                </div>
+
+                <div class="alert alert-info fade in pull-left">
+                    After clicking &nbsp<label class="label label-success" style="padding-top:6.5px">Retrieve</label> , your password will be sent to your mailbox.
+                </div>
+
+                <!--<div class="form-group col-sm-12">-->
+                    <!--<label class="col-sm-12 control-label">Email :</label>-->
+                    <!--<div class="col-sm-12 input-group" style="padding-left:15px;padding-right:15px">-->
+                        <!--<input type="text" class="form-control" id="resetPW_email"/>-->
+                        <!--<span class="input-group-btn"><button id="resetPW_check" type="button" class="btn btn-warning">Check</button></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group col-sm-12">-->
+                    <!--<label class="col-sm-12 control-label">Verification Code :</label>-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<input type="text" class="form-control"-->
+                               <!--id="resetPW_code"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group col-sm-12">-->
+                    <!--<label class="col-sm-12 control-label">New Password :</label>-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<input type="password" class="form-control"-->
+                               <!--id="resetPW_password"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group col-sm-12">-->
+                    <!--<label class="col-sm-12 control-label">New Password again :</label>-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<input type="password" class="form-control"-->
+                               <!--id="resetPW_password_again"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            </div>
+            <div class="modal-footer">
+                <button id="modal_reset" type="button" class="btn btn-success" style="font-size:15px">
+                    Retrieve
+                </button>
+                <button id="modal_cancel" type="button" class="btn btn-default" data-dismiss="modal"
+                        style="font-size:15px">
+                    Cancel
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--title-->
+<div class='container-fluid text-center'>
+    <div class="row title-container col-xs-10 col-xs-offset-1" style="background-image: url(img/banner/ISDE_banner4.jpg);background-position: center center; background-repeat:no-repeat; background-size: 100%">
+<!--        <img src="img/logo/ISDE.png" width="80" height="84"><img src="img/logo/CBAS.png" width="80" height="84"><img src="img/logo/AIRICAS.jpg" width="80" height="84"><img src="img/logo/nnulogo.jpg" width="80" height="84">-->
+        <!-- <div class="col-xs-12 logo top">
+          <img class="flower" src="img/logo/flower.svg">
+          <img class="olive" src="img/logo/olive.svg">
+        </div>
+        <div class="col-xs-12 logo bottom">
+          <img class="left-house" src="img/logo/left-house.svg">
+          <img class="main-house" src="img/logo/main-house.svg">
+          <img class="right-house" src="img/logo/right-house.svg">
+        </div> -->
+        <!-- <img class="title" src="img/title.png"> -->
+        <br>
+        <div class="col-xs-12 logotitle">
+            <br><br><br><br><br><br><br><br><br><br><br>
+<!--            <p style="font-size:40px;font-family: 'Times New Roman'">The 1st Youth Innovation Forum on Digital Earth</p>-->
+<!--                &lt;!&ndash;          <br>&ndash;&gt;-->
+<!--                &lt;!&ndash;          <p style="font-size:22px">"Modelling for Environmental Sustainability: Asia’s Next Great Challenge"</p>&ndash;&gt;-->
+<!--            <p style="font-size:30px;font-family: 'Times New Roman'">August 21-23, 2023</p>-->
+        </div>
+    </div>
+</div>
+<div style="padding-left:15px;padding-right: 15px">
+    <nav class="navbar navbar-default col-xs-10 col-xs-offset-1" id="headnav"
+         style="padding-left:0px;margin-bottom: 0px;font-family: 'Times New Roman'">
+        <!--创建一个bootstrap全屏布局-->
+        <div class="container-fluid" style="padding-left:0px">
+            <!--创建一个bootstrapLOGO布局-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navigationBar " aria-expanded="false">
+                    <span class="sr-only">switch</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--创建导航条元素布局-->
+            <div class="row">
+                <div class="collapse navbar-collapse " id="navigationBar">
+                    <ul id="navigations" class="nav navbar-nav text-center">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" data-href="#">← &nbspHome</a>
+                        </li>
+
+                        <li style="position: absolute;margin:auto;top:0;left: 0;bottom: 0;right:0;line-height:0px; height:0px;font-size:30px;font-weight: bold;color:#117450">
+                            Submission System
+                        </li>
+
+                        <!--<center>-->
+                        <!--<li class="nav-item">-->
+                        <!--<a class="nav-link">Submission System</a>-->
+                        <!--</li>-->
+                        <!--</center>-->
+                        <li id="nav_login" class="nav-item active" style="position:absolute;right:0px">
+                            <a class="nav-link" data-href="#Login" style="font-weight: bold">Login &nbsp&nbsp|&nbsp&nbsp
+                                Register</a>
+                        </li>
+                        <li id="nav_space" class="nav-item " style="position:absolute;right:0px;display: none;">
+                            <a class="nav-link" data-href="#UserSpace" style="font-weight: bold">Hi!Tom</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</div>
+
+
+<div class="row" id="Login" style="display: none;margin: 0px;">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h4 class="cos-strong">Login | <u><a class="register" href="javascript:void(0);">Register</a></u></h4>
+        <hr>
+        <div class="cos-modal" style="margin-top:30px">
+            <div class="col-md-5" style="margin-left:40px">
+                <span class="col-md-offset-1 col-md-10">
+                    <label class="control-label col-md-3"
+                           style="font-size:18px;margin-top:5px;width:115px;">Address :</label>
+                    <div class="col-md-8">
+                        <input id="login_account" type="text" class="form-control" name="account" placeholder="XXX.XX@XX.com"/>
+                    </div>
+                </span>
+                <span class="col-md-offset-1 col-md-10" style="padding-top:10px">
+                    <label class="control-label col-md-3"
+                           style="font-size:18px;margin-top:5px;width:115px;">Password :</label>
+                    <div class="col-md-8">
+                        <input id="login_password" type="password" class="form-control" name="password" placeholder="Please enter your password"/>
+                    </div>
+                </span>
+                <span class="col-md-offset-1 col-md-10" style="padding-top:25px">
+                    <div class="col-md-offset-2 pull-left">
+                        <button class="btn btn-success" id="btn-login"
+                                type="button">&nbsp&nbsp Login &nbsp&nbsp</button>
+                    </div>
+                    <div class="col-md-offset-3 pull-left">
+                        <button class="btn btn-info" id="btn-reset" type="button">&nbsp&nbsp Reset &nbsp&nbsp</button>
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-6" style="border-left: 1px solid #1b6d85 ;margin-top:10px;">
+                <p style="margin-left:15px">1.You should log in to submit or check your papers.</p>
+                <p style="margin-left:15px">2.If you don't have an account yet, please click <u><a id="toregister" class="register"
+                                                                                                   href="javascript:void(0);"
+                                                                                                   data-href="#Register"
+                                                                                                   style="font-weight: bold;">here</a></u>
+                    to register one.</p>
+                <p style="margin-left:15px">3.Forget your password ? <u><a href="javascript:void(0);"
+                                                                           data-toggle="modal" data-target="#resetPW"
+                                                                           id="resetPassword"
+                                                                           style="font-weight: bold;">Click here</a></u>.
+                </p>
+                <p style="margin-left:15px">4.If you have any problem, you can send email to: <a style="font-weight: bold;">ISDE_YSIN@163.com</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="Register" style="display:none;margin: 0px;">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h4 class="cos-strong"><u><a class="login" href="javascript:void(0);">Login</a></u> | Register</h4>
+        <hr>
+        <div class="cos-modal" style="margin-top:30px">
+            <div class="col-md-5" style="margin-left:20px">
+                <span class="col-md-12">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Email :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="email"/>
+                    </div>
+                    <!--<div class="col-md-8 input-group register-input" style="padding-left:15px;padding-right:15px">-->
+                        <!--<input type="text" class="form-control register" name="email"/>-->
+                        <!--<span class="input-group-btn"><button id="check" type="button"-->
+                                                              <!--class="btn btn-warning" style="font-weight: bold;">Check</button></span>-->
+                    <!--</div>-->
+                </span>
+                <!--<span class="col-md-12" style="padding-top:10px">-->
+                    <!--<label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span-->
+                            <!--style="color: red;">*</span> Verification Code :</label>-->
+                    <!--<div class="col-md-8 register-input">-->
+                        <!--<input type="text" class="form-control" name="code"/>-->
+                    <!--</div>-->
+                <!--</span>-->
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Password :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="password" class="form-control register" name="password"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Confirm Password:</label>
+                    <div class="col-md-8 register-input">
+                        <input type="password" class="form-control" name="password_again"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Name :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="name"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Gender :</label>
+                    <div class="col-md-8 register-input">
+                        <div class="form-control-static">
+                            <label style="margin-right: 10px; font-size: 15px">
+                                <input type="radio" name="gender" value="Male" checked="checked"/>
+                                <label style="float:left; margin-left: 5px;">Male</label>
+                            </label>
+                            <label style="margin-right: 10px; font-size: 15px">
+                                <input type="radio" name="gender" value="Female"/>
+                                <label style="float:left; margin-left: 5px;">Female</label>
+                            </label>
+                        </div>
+                    </div>
+                </span>
+                <span class="col-md-12" style="margin-top: 10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span> Title :</label>
+                    <div class="col-md-8 register-input">
+
+                        <select id="userTitle" class="form-control m-bot15" style="font-weight: bold;">
+                            <option>Mr.</option>
+                            <option>Mrs.</option>
+                            <option>Miss.</option>
+                            <option>Dr.</option>
+                            <option>Prof.</option>
+                        </select>
+                    </div>
+                </span>
+
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4"
+                           style="font-size:18px;margin-top:5px;min-width: 184px;"><span
+                            style="color: red;">*</span>&nbspAffiliation :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="affiliation"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4"
+                           style="font-size:18px;margin-top:5px;min-width: 184px;">
+                        &nbspPosition :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="position"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4"
+                           style="font-size:18px;margin-top:5px;min-width: 184px;">
+                        &nbspMajor :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="major"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+<!--                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px"><span style="font-size:18px;color: red;">*</span>Education background</label>-->
+                    <label class="control-label col-md-4"
+                           style="font-size:18px;margin-top:5px;min-width: 184px;">
+                        Education Background :</label>
+                    <div class="col-md-8 register-input">
+                        <input type="text" class="form-control register" name="education"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;">&nbsp Phone :</label>
+                    <div class="col-md-8 register-input">
+                        <input id="userPhone" type="text" class="form-control register" name="phone"/>
+                    </div>
+                </span>
+<!--                <span class="col-md-12" style="padding-top:10px">-->
+<!--                    <label class="control-label col-md-4"-->
+<!--                           style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        Invoice header :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <input type="text" class="form-control register" name="Invoice_header"/>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px">-->
+<!--                    <label class="control-label col-md-4"-->
+<!--                           style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        Tax code :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <input type="text" class="form-control register" name="Tax_code"/>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px">-->
+<!--                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        <span style="color: red;">*</span> How to receive invoices :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <div class="form-control-static">-->
+<!--                            <label style="margin-right: 10px; font-size: 15px;" class="Receive_invoice">-->
+<!--                                <input type="radio" name="Receive_invoices" value="Reporting" checked="checked" style="position: absolute;z-index: 99"/>-->
+<!--                                <label style="float:left; margin-left: 5px;">Receive at reporting time</label>-->
+<!--                            </label>-->
+<!--                            <label style="margin-right: 10px; font-size: 15px" class="Receive_invoice">-->
+<!--                                <input type="radio" name="Receive_invoices" value="Postal" style="position: absolute;z-index: 99"/>-->
+<!--                                <label style="float:left; margin-left: 5px;">Postal</label>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px;" id="postalAddress">-->
+<!--                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        Address :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <input type="text" class="form-control register" name="Postal_address"/>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px;" id="postalAssociate">-->
+<!--                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        Associate :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <input type="text" class="form-control register" name="Postal_associate"/>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px;" id="postalPhone">-->
+<!--                    <label class="control-label col-md-4" style="font-size:18px;margin-top:5px;min-width: 184px;">-->
+<!--                        Phone number :</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <input type="text" class="form-control register" name="Postal_phone"/>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span class="col-md-12" style="padding-top:10px">-->
+<!--                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px"><span style="font-size:18px;color: red;">*</span>Visa invitation letter</label>-->
+<!--                    <div class="col-md-8 register-input">-->
+<!--                        <div class="form-control-static">-->
+<!--                            <label style="margin-right: 10px; font-size: 15px">-->
+<!--                   kuaidian /
+             df<input type="radio" name="visa" value="yes"/>-->
+<!--                                <label style="float:left; margin-left: 5px;">Yes</label>-->
+<!--                            </label>-->
+<!--                            <label style="margin-right: 10px; font-size: 15px">-->
+<!--                                <input type="radio" name="visa" value="no" />-->
+<!--                                <label style="float:left; margin-left: 5px;">No</label>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </span>-->
+<!--                <span id="visaFile" class="col-md-12" style="margin-top:10px; display: none" >-->
+<!--                    <div class="col-md-10">-->
+<!--                        <input id="uploadVisa" type="file" class="file marginTop" name="visa" style="display: none;"-->
+<!--                               accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword"-->
+<!--                               data-show-preview="false" data-show-upload="false" data-show-remove="false"/>-->
+<!--                        <div id="visaGroup" class="marginTop">-->
+<!--                            <button id="visaName" class="btn btn-default" style="width: 78%;font-weight: bold;"-->
+<!--                            ></button>-->
+<!--                            <button id="visaRemove" class="btn btn-danger" style="width: 20%">✕</button>-->
+<!--                        </div>-->
+<!--                        <button id="visaBlock" class="btn btn-default marginTop" style="width: 100%;font-weight: bold"-->
+<!--                        ></button>-->
+<!--                    </div>-->
+<!--                </span>-->
+                <span class="col-md-12">
+                    <div class="col-md-8 register-input col-md-offset-4 register-marginLeft" style="padding-top:20px;">
+                        <button id="register_btn" class="btn btn-success btn-block spinner"
+                                type="button">Sign Up</button>
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-6" style="border-left: 1px solid #1b6d85 ;margin-left:20px">
+                <p style="margin-left:15px">1.&nbsp(<span style="font-size:18px;color: red;font-weight: bold;">*</span>)
+                    is necessary.</p>
+                <p style="margin-left:15px">2.Please enter your own email,the correct email address can help you retrieve your password.</p>
+                <p style="margin-left:15px">3.Email is your account,please remember it.</p>
+
+                <!--<p style="margin-left:15px">3.After clicking &nbsp<span class="label label-warning" style="font-weight: bold;padding-top:6.5px">Check</span>-->
+                    <!--,the Verification Code will be sent to your Email.</p>-->
+                <!--<p style="margin-left:15px">4.If you can not find the Verification Code in your email,please check the spam.</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="Submit_page" style="display: none;margin: 0px;">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h3 class="cos-strong" style="display: inline-block"><u><a id="userName_submit" href="javascript:void(0);">Calvin</a></u>
+            |</h3><h4 class="cos-strong" style="display: inline-block">&nbspSubmit</h4>
+        <hr>
+        <div class="cos-modal" style="margin-top:30px">
+            <div class="col-md-7" style="margin-left:20px">
+                <span class="col-md-12" id="pid" style="display: none;">
+                    <label class="control-label col-md-3 submitLabel"
+                           style="font-size:18px;margin-top:5px;">Paper ID :</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" name="pid" readonly="readonly"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px;"><span
+                            style="font-size:18px;color: red;">*</span> Title :</label>
+                    <div class="col-md-10">
+                        <textarea type="text" class="form-control" name="title" style="font-weight: bold;"></textarea>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px;"><span style="font-size:18px;color: red;">*</span>Session</label>
+                    <div class="col-md-10">
+                        <select class="form-control m-bot15" id="sess" name="sess" >
+                            <option value="Session1">Session 1&ensp;&nbsp;：Study on the interaction among Sustainable Development Goals</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Junze Zhang &nbsp;(Research Center for Eco-Environmental Sciences, Chinese Academy of Sciences),  Min Cao&nbsp;(School of Geography，Nanjing Normal University)</option>-->
+                            <option value="Session2">Session 2&ensp;&nbsp;：Big Earth Data in Promote of Marine and Coastal Sustainable Development（SDG 14）</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Mingming Jia&nbsp;(International Research Center of Big Data for Sustainable Development Goals), Hongsheng Zhang&nbsp;(The University of Hong Kong)</option>-->
+                            <option value="Session3">Session 3&ensp;&nbsp;：Spatial technologies facilitate the conservation and sustainable development of natural and cultural heritage (SDG11 &SDG15)</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Lei Luo&nbsp;(International Research Center of Big Data for Sustainable Development Goals)</option>-->
+                            <option value="Session4">Session 4&ensp;&nbsp;：Intelligent monitoring and evaluation of agricultural land systems</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Lijun Zuo&nbsp;(Aerospace Information Research Institute, CAS),  Qiangyi Yu&nbsp;(Institute of Agricultural Resources and Regional Planning, CAAS),  Baodong Xu(Huazhong Agricultural University)&nbsp;</option>-->
+                            <option value="Session5">Session 5&ensp;&nbsp;：Sustainability and Regional Development Transformation</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Shuangshuang Tang&nbsp;(Nanjing Normal University),Xiaohui Hu&nbsp;(Nanjing Normal University),Xiyan Mao&nbsp;(Nanjing University)</option>-->
+                            <option value="Session6">Session 6&ensp;&nbsp;：Regional sustainable development and strategies</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Yali Liu&nbsp;(Beijing Forestry University),Xutong Wu&nbsp;(Beijing Normal University)</option>-->
+                            <option value="Session7">Session 7&ensp;&nbsp;：Geospatial Big Data Analytics and AI for Public Health</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: Wei Luo&nbsp;(National University of Singapore),Ling Yi;&nbsp;(Shenzhen Institutes of Advanced technology, Chinese Academy of Sciences)</option>-->
+                            <option value="Session8">Session 8&nbsp;&nbsp;：Big Earth Data in Support of Sustainable Urban Development</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: </option>-->
+                            <option value="Session9">Session 9&ensp;&nbsp;：Advancements and Challenges in One Health Studies leveraging Big Earth Data</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: </option>-->
+                            <option value="Session10">Session 10：Key Technologies and Paths for Achieving the Global SDG7 Affordable and Clean Energy Goal</option>
+<!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+<!--                                Chairs: </option>-->
+                            <option value="Session11">Session 11：Novel Monitoring Methods in Remote Sensing of Surface Water</option>
+                            <!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+                            <!--                                Chairs: </option>-->
+                            <option value="Session12">Session 12：Climate Change and Environmental Public Health</option>
+                            <!--                                &ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;-->
+                            <!--                                Chairs: </option>-->
+<!--                            <option value="Session12"> Student Panel Discussions</option>-->
+                        </select>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-3 submitLabel"  style="font-size:18px;margin-top:5px;"><span
+                            style="font-size:18px;color: red;">*</span> Authors :</label>
+                    <div class="col-md-10">
+                        <!--<input id="authors" type="text" class="form-control" name="authors" placeholder=" "/>-->
+                        <div class="panel-group" id="accordion">
+                            <div class="authors">
+                                <div class="panel" style="border-color:#ccc">
+                                <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne"
+                                   aria-expanded="true">
+                                    <b>Author 1</b>
+                                </a>
+                                </h4>
+
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div>
+                                        <lable class='control-label' style='font-size: 15px;font-weight: bold;'>
+                                           <span style="font-size:18px;color: red;">*</span> First Name:
+                                        </lable>
+                                        <div class='input-group col-sm-12'>
+                                            <input type='text' name="submit_first_name" class='form-control'
+                                                   style="font-weight: bold;">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <lable class='control-label' style='font-size: 15px;font-weight: bold;'>
+                                           <span style="font-size:18px;color: red;">*</span> Last Name:
+                                        </lable>
+                                        <div class='input-group col-sm-12'>
+                                            <input type='text' name="submit_last_name" class='form-control'
+                                                   style="font-weight: bold;">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <lable class='control-label' style='font-size: 15px;font-weight: bold;'>
+                                           <span style="font-size:18px;color: red;">*</span> Title:
+                                        </lable>
+                                        <div class='input-group col-sm-12'>
+                                            <select class="form-control m-bot15" name="submit_title"
+                                                    style="font-weight: bold;">
+                                                <option value="Mr.">Mr.</option>
+                                                <option value="Mrs.">Mrs.</option>
+                                                <option value="Miss.">Miss.</option>
+                                                <option value="Dr.">Dr.</option>
+                                                <option value="Prof.">Prof.</option>
+                                             </select>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <lable class='control-label' style='font-size: 15px;font-weight: bold;'>
+                                           <span style="font-size:18px;color: red;">*</span> Institution(s):
+                                        </lable>
+                                        <div class='input-group col-sm-12'>
+                                            <textarea type='text' name="submit_ins" class='form-control'
+                                                      style="font-weight: bold;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div name="tip" >
+                                        <lable class='control-label' style='font-size: 15px;'>
+                                            Use <span class="label label-info" style="font-weight: bold;">;</span> between institutions
+                                        </lable>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-info btn-block form-control author-add"
+                                    style="border-radius: 3px;margin-top: 4px;">
+                                Add Author
+                            </button>
+                        </div>
+                    </div>
+                </span>
+
+<!--                <span class="col-md-12" style="margin-top:0px">-->
+<!--                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px;"><span-->
+<!--                            style="font-size:18px;color: red;">*</span> Abstract :</label>-->
+<!--                    <div class="col-md-10">-->
+<!--                        <textarea id="abstract" type="text" class="form-control" name="abstract"-->
+<!--                                  style="height: 190px;font-weight: bold;"></textarea>-->
+<!--                    </div>-->
+<!--                </span>-->
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-3 submitLabel"
+                           style="font-size:18px;margin-top:5px">Keywords :</label>
+                    <div class="col-md-10">
+                        <input id="keywords" type="text" class="form-control" name="keywords" style="font-weight: bold;"/>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px;" name="tip">
+                    <div class="col-md-10 col-md-offset-3 marginLeft" style="height:20px;font-size: 18px;">
+                        Press <STRONG>ENTER</STRONG> to confirm one keyword.
+                    </div>
+                </span>
+                <span class="col-md-12" style="margin-top:10px">
+                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px;"><span style="font-size:18px;color: red;">*</span>Abstract or Full Paper (Optional)</label>
+                    <div class="col-md-10">
+                        <input id="uploadFile" type="file" class="file marginTop" name="article" style="display: none;"
+                               accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword"
+                               data-show-preview="false" data-show-upload="false" data-show-remove="false"/>
+                        <div id="fileGroup" class="marginTop">
+                            <button id="fileName" class="btn btn-default" style="width: 78%;font-weight: bold;"
+                                    ></button>
+                            <button id="fileRemove" class="btn btn-danger" style="width: 20%">✕</button>
+                        </div>
+                        <button id="fileBlock" class="btn btn-default marginTop" style="width: 100%;font-weight: bold"
+                                ></button>
+                    </div>
+                </span>
+                <span class="col-md-12" style="padding-top:10px">
+                    <label class="control-label col-md-3 submitLabel" style="font-size:18px;margin-top:5px;"><span style="font-size:18px;color: red;">*</span>Submit for EPA (Excellent Paper Award)</label>
+                    <div class="col-md-10">
+                    <select class="form-control m-bot15" id="EPA" name="EPA" >
+                        <option value="NO">NO</option>
+                        <option value="YES">YES</option>
+                      </select>
+                    </div>
+                <span class="col-md-12" id="submit_btns">
+                    <div class="col-md-10 marginLeft" style="padding-top:20px;">
+                        <button id="save" class="btn btn-info" type="button" style="width:49%;"
+                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                data-content="After saving,you can modify this paper in your personal space.">Save</button>
+                        <button id="submit" class="btn btn-success" type="button" style="width:49%;"
+                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                data-content="Once you submit,you CAN NOT modify this paper again.">Submit</button>
+                    </div>
+                </span>
+
+                <span id="progressBar" class="col-md-12" style="padding-top:10px;visibility: hidden">
+                    <div class="col-md-offset-3 col-md-10">
+                        <div class="progress progress-striped active">
+	                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="col-md-4" style="border-left: 1px solid #1b6d85 ;margin-left:20px">
+                <!--<p style="margin-left:15px">1.<b>One Institution,One Enter.</b></p>-->
+                <p style="margin-left:15px">1.&ensp;&ensp;(<span style="font-size:18px;color: red;font-weight: bold;">*</span>)
+                    is necessary for submission.</p>
+                <p style="margin-left:15px">2.&ensp;Manuscript paradigm&nbsp: &nbsp<a class="btn btn-info"
+                                                                                href="./doc/Manuscript paradigm.dotx">Download</a></p>
+                <p style="margin-left:15px">3.&ensp;After submitting, you can check the manuscript in your personal space.</p>
+                <p style="margin-left:15px">4.&ensp;Participants are required to submit a 200-word abstract in English, and
+                                the full text should be submitted if participating in the paper award, and
+                                the session to be reported can be selected in the submission.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="UserSpace" style="display: none;margin: 0px;">
+    <div class="col-xs-10 col-xs-offset-1">
+        <span><h3 id="userName" class="cos-strong" style="display: inline-block">Calvin |</h3>&nbsp<h3 class="cos-strong" style="display: inline-block;">&nbsp|</h3> <u><a id="logout"
+                                                                                    href="javascript:void(0);"><h4
+                style="display: inline">Log&nbsp Out</h4></a></u></span>
+        <hr>
+        <div class="cos-modal col-md-12" style="margin-top:10px">
+            <span><h4 class="cos-strong" style="float:left">Your Manuscript :</h4><button id="submit_article" class="btn btn-success" style="margin-left: 20px;float: left;font-size: 16px;">Submit New Manuscript or Abstract</button><button id="registration-fee" class="btn btn-success" style="margin-left: 20px;float: right;font-size: 16px;">Pay for registration</button></span>
+
+            <table class="display table table-bordered table-striped dataTable"
+                   id="dynamic-table"
+                   aria-describedby="dynamic-table_info">
+                <thead>
+                <tr role="row">
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Paper ID: activate to sort column ascending"
+                        width="200px">
+                        Paper ID
+                    </th>
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Title: activate to sort column ascending"
+                        width="200px">
+                        Title
+                    </th>
+
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Author: activate to sort column ascending"
+                        width="200px">
+                        Authors
+                    </th>
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Keywords: activate to sort column ascending"
+                        width="200px">
+                        Keywords
+                    </th>
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Date: activate to sort column ascending"
+                        width="200px">
+                        Date
+                    </th>
+                    <th class="sorting"
+                        role="columnheader" tabindex="0"
+                        aria-controls="dynamic-table"
+                        rowspan="1" colspan="1"
+                        aria-label="Status: activate to sort column ascending"
+                        width="200px">
+                        Status
+                    </th>
+                    <!--<th class="sorting"-->
+                    <!--role="columnheader" tabindex="0"-->
+                    <!--aria-controls="dynamic-table"-->
+                    <!--rowspan="1" colspan="1"-->
+                    <!--aria-label="Operation: activate to sort column ascending"-->
+                    <!--width="200px">-->
+                    <!--Operation-->
+                    <!--</th>-->
+
+                    <!--<th class="hidden-phone sorting"-->
+                    <!--role="columnheader" tabindex="0"-->
+                    <!--aria-controls="dynamic-table"-->
+                    <!--rowspan="1" colspan="1"-->
+                    <!--aria-label="Journal: activate to sort column ascending"-->
+                    <!--width="100px">-->
+                    <!--Journal-->
+                    <!--</th>-->
+                    <!--<th class="hidden-phone sorting"-->
+                    <!--role="columnheader" tabindex="0"-->
+                    <!--aria-controls="dynamic-table"-->
+                    <!--rowspan="1" colspan="1"-->
+                    <!--aria-sort="descending"-->
+                    <!--aria-label="Pages: activate to sort column ascending"-->
+                    <!--width="100px">-->
+                    <!--Pages-->
+                    <!--</th>-->
+                    <!--<th class="hidden-phone sorting"-->
+                    <!--role="columnheader" tabindex="0"-->
+                    <!--aria-controls="dynamic-table"-->
+                    <!--rowspan="1" colspan="1"-->
+                    <!--aria-sort="descending"-->
+                    <!--aria-label="Links: activate to sort column ascending"-->
+                    <!--width="100px">-->
+                    <!--Links-->
+                    <!--</th>-->
+                </tr>
+                </thead>
+
+                <tbody role="alert" aria-live="polite"
+                       aria-relevant="all">
+                <!--<tr class="gradeX odd">-->
+                <!--<td class=" ">Tridesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssnt</td>-->
+                <!--<td class=" ">Internet-->
+                <!--Explorer 4.0-->
+                <!--</td>-->
+                <!--<td class=" ">Win 95+</td>-->
+                <!--<td class="center hidden-phone ">4-->
+                <!--</td>-->
+                <!--<td class="center hidden-phone  sorting_1">-->
+                <!--X-->
+                <!--</td>-->
+                <!--<td><center><a href='javascript:;' class='fa fa-times' style='color:red'></a></center></td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row" id="Payfor" style="display: none;margin: 0px; font-family:'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h3 class="cos-strong">Payment Methods</h3>
+        <div class="cos-modal" style="margin-top:30px">
+            <div class="col-md-7" style="margin-left:20px">
+                <div class="cos-modal">
+                    <li class="cos-strong">Electronic Funds Transfer(EFT)</li>
+                    <p></p>
+                    <p>Account Name: The International Society for Digital Earth(ISDE) &nbsp; (账户名称：国际数字地球协会)<p>
+                    <p></p>
+                    <p>Account opening bank:&ensp;&nbsp;INDUSTRIAL AND COMMERCIAL BANK OF CHINA(ICBC), Beijing North Beach Sub-branch &nbsp; (开户行：中国工商银行北京北沙滩支行) </p>
+                    <p></p>
+                    <p>Account Number:&ensp;&nbsp;0200244509200015729 &nbsp;（账号：0200244509200015729）</p>
+                    <hr>
+                    <li class="cos-strong">Credit Card</li>
+                    <p></p>
+                    <p>Payment by credit card on the day of registration&nbsp;(rates refer to the standard after June 21)</p>
+                    <p>Electronic invoices are available.</p>
+                </div>
+            </div>
+            <div class="col-md-4" style="border-left: 1px solid #1b6d85 ;margin-left:20px">
+                <!--<p style="margin-left:15px">1.<b>One Institution,One Enter.</b></p>-->
+                <p style="margin-left:15px">1.&ensp;Attendees should pay the registration fee according to the Registration-Registration Fee.</p>
+                <p style="margin-left:15px">(<span style="font-size:18px;color: red;font-weight: bold;">*</span>)2.&ensp;If paying through EFP, be sure to <strong style="color:red">note conference information
+                                                        (ISDE_YSIN), your name, phone number and affiliation</strong> when paying registration fee,
+                                                        otherwise it will not be possible to verify your participation information</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="SubmitDDL" style="display: none;margin: 0px; font-family:'Times New Roman'">
+    <div class="col-xs-10 col-xs-offset-1">
+        <br>
+        <h3 class="cos-strong" style="color: red">Abstract and paper submissions are now closed</h3>
+        <br>
+        <h3 class="cos-strong" style="color: red">Submission deadline: August 11</h3>
+    </div>
+</div>
+
+<div class='container-fluid footer-container text-center' style="margin-top:20px;font-family: 'Times New Roman'">
+    <hr style="margin-top:10px">
+    <span style="font-family:arial;">Copyright &copy;2018 NNU</span>
+    <div>
+        <a href="http://en.njnu.edu.cn/">http://en.njnu.edu.cn/</a>
+    </div>
+</div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="ref/jquery.min.js"></script>
+<script type="text/javascript" src="ref/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/fileinput.js"></script>
+<script type="text/javascript" src="js/bootstrap-tagsinput-1.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/DT_bootstrap.js"></script>
+<script type="text/javascript" src="ref/iCheck/jquery.icheck.js"></script>
+<!--<script type="text/javascript" src="ref/country-select/js/select_gj.min.js"></script>-->
+<!--<script type="text/javascript" src="ref/country-select/js/select2_1.js"></script>-->
+<script type="text/javascript" src="js/axios.min.js"></script>
+<script type="text/javascript" src="js/submission.js"></script>
